@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'listing_amenities/show'
+
+  get 'listing_amenities/index'
+
   get 'bookings/show'
 
   get 'bookings/edit'
