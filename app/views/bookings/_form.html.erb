@@ -2,6 +2,7 @@
   <%= simple_form_for ([@listing, @booking]) do |f| %>
     <%= f.input :checkin, as: :date %>
     <%= f.input :checkout, as: :date %>
+    <%= f.input :introduction, as: :text %>
     <%= f.button :submit, class: "btn btn-primary btn-lg btn-block" %>
   <% end %>
 </div>
