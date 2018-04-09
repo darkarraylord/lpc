@@ -1,7 +1,18 @@
 <div class="container">
   <%= simple_form_for ([@listing, @booking]) do |f| %>
-    <%= f.input :checkin, as: :date %>
-    <%= f.input :checkout, as: :date %>
+    <div class="input-group input-daterange">
+    <%= f.input :checkin, as: :text, class:"form-control" %>
+    <div class="input-group-addon">to</div>
+    <%= f.input :checkout, as: :text, class:"form-control" %>
+  </div>
+  
+  <div class="input-group input-daterange">
+    <input type="text" class="form-control" value="2012-04-05">
+    <div class="input-group-addon">to</div>
+    <input type="text" class="form-control" value="2012-04-19">
+  </div>
+    
+    
     <%= f.input :introduction, as: :text %>
     <%= f.button :submit, class: "btn btn-primary btn-lg btn-block" %>
   <% end %>
