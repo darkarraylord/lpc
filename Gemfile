@@ -9,13 +9,20 @@ gem 'puma'
 gem 'rails', '5.1.6'
 gem 'redis'
 
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
+
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 4.7'
+gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+
+gem 'bootstrap-datepicker-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
