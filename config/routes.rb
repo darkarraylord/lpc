@@ -1,26 +1,17 @@
 Rails.application.routes.draw do
-
-  get 'bookings/show'
-
-  get 'bookings/edit'
-
-  get 'bookings/index'
-
-  get 'amenities/show'
-
-  get 'amenities/index'
-
-  get 'amenities/new'
-
-  get 'amenities/edit'
-
-  get 'listings/index'
-
-  get 'listings/show'
-
-  get 'listings/new'
-
-  get 'listings/edit'
+  
+  resources :amenities
+  
+  resources :listings do 
+    resources :bookings
+    resources :amenities
+  end
+  resources :bookings
+  
+  resources :user do 
+    resources :bookings, only: [:index, :show, :edit]
+  end
+  
 
   devise_for :users
   root to: 'pages#home'

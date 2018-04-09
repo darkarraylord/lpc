@@ -1,2 +1,15 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<div class="container">
+  <h1>Your booking to <%= @booking.listing.name %></h1>
+  <div class="row">
+    <div class="col-xs-6"><strong>CheckIn:</strong> <%= @booking.checkin %></div>
+    <div class="col-xs-6"><strong>CheckOut:</strong> <%= @booking.checkout %></div>
+  </div>
+  <div class="row">
+    <strong>Status: </strong><%= @booking.status %>
+  </div>
+  <%= link_to "edit this booking", edit_listing_booking_path(listing_id: @booking.listing, id: @booking) %>
+  <br>
+  <%= link_to "Approve", listing_booking_path(@booking, :booking => { :status => "approved"}), :method => :put, class:"btn btn-success btn-lg active" %>
+  <%= link_to "Deny", listing_booking_path(@booking, :booking => { :status => "denied"}), :method => :put, class:"btn btn-danger btn-lg active", data: { confirm: "Are you sure you want to deny?" } %>
+            
+</div>
