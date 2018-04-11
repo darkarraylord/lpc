@@ -7,9 +7,10 @@
   <div class="row">
     <strong>Status: </strong><%= @booking.status %>
   </div>
-  <%= link_to "edit this booking", edit_listing_booking_path(listing_id: @booking.listing, id: @booking) %>
+  <%= link_to "edit this booking", edit_listing_booking_path(listing_id: @booking.listing, id: @booking) if @booking.status != 'approved' && current_user == @booking.user %>
   <br>
-  <%= link_to "Approve", listing_booking_path(@booking, :booking => { :status => "approved"}), :method => :put, class:"btn btn-success btn-lg active" %>
-  <%= link_to "Deny", listing_booking_path(@booking, :booking => { :status => "denied"}), :method => :put, class:"btn btn-danger btn-lg active", data: { confirm: "Are you sure you want to deny?" } %>
-            
+  <% if @booking.listing.user == current_user %>
+    <%= link_to "Approve", listing_booking_path(@booking, :booking => { :status => "approved"}), :method => :put, class:"btn btn-success btn-lg active" %>
+    <%= link_to "Deny", listing_booking_path(@booking, :booking => { :status => "denied"}), :method => :put, class:"btn btn-danger btn-lg active", data: { confirm: "Are you sure you want to deny?" } %>
+  <% end %>
 </div>

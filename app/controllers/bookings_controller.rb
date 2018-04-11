@@ -16,11 +16,15 @@ class BookingsController < ApplicationController
     @booking = @listing.bookings.new(booking_params)
     @booking.user = current_user
     @booking.status = "pending"
-    if @booking.save
-      flash[:success] = "Congratulations, you have booked  #{@listing.name}. Once approved we will email you."
-      redirect_to listing_booking_path(listing_id: params[:listing_id], id: @booking)
+  
+    if @booking.date_overlaps?(@listing.id) || @booking.date_between?(@listing.id)
+      flash.now[:alert] = "The dates you've selected are already booked. Please select other dates." 
+      render :new
+    elsif @booking.save
+      flash.now[:sucess]  =  "Congratulations, you have booked  #{@listing.name}. Once approved we will email you."
+      redirect_to listing_booking_path(listing_id: params[:listing_id], id: @booking) 
     else
-      flash[:error] = "We were not able to create this booking."
+      flash.now[:alert] = "We were not able to create this booking.Please contact at: ....."
       render :new
     end
   end
@@ -32,13 +36,16 @@ class BookingsController < ApplicationController
   
   def update
     @booking = Booking.find(params[:id])
-    @booking.update(booking_params)
-    flash[:success] = "Booking updated with success!"
-    redirect_to listing_booking_path(listing_id: params[:listing_id], id: @booking)
+    if @booking.update(booking_params)
+      flash.now[:success] = "Booking updated with success!"
+      redirect_to listing_booking_path(listing_id: params[:listing_id], id: @booking)
+    else
+      redirect_back fallback_location: root_path, alert: "The dates you've selected are already booked. Please select other dates."
+    end
   end
   
   private
   def booking_params
-    params.require(:booking).permit(:checkin, :checkout, :listing, :status)
+    params.require(:booking).permit(:checkin, :checkout, :listing, :status, :introduction)
   end
 end
