@@ -1,9 +1,35 @@
 <div class="container">
   <%= simple_form_for ([@listing, @booking]) do |f| %>
-    <%= f.input :checkin, as: :date %>
-    <%= f.input :checkout, as: :date %>
+    <div class="input-group input-daterange">
+      <%= f.input :checkin, :as => :string,  class:"form-control" %>
+      <div class="input-group-addon">to</div>
+      <%= f.input :checkout, :as => :string, hint: "Minimum booking is one week.", class:"form-control" %>
+    </div>
     <%= f.input :introduction, as: :text %>
     <%= f.button :submit, class: "btn btn-primary btn-lg btn-block" %>
   <% end %>
 </div>
-<%= params %>
+
+<% content_for :datepicker_range do %>
+  <%= javascript_tag do %>
+      var date = new Date();
+      date.setDate(date.getDate()-1);
+      
+      $('.input-daterange input').each(function() {
+         $(this).datepicker({
+          format: "yyyy-mm-dd",
+          startDate: date,
+          orientation: "bottom auto",
+          autoclose: true,
+          todayHighlight: true,
+          datesDisabled: <%= raw Listing.find(params[:listing_id]).booked_dates %>
+        });
+      });
+  <% end %>
+<% end %>
+<h1>Falta:</h1>
+<ul>
+  <li>Capturar informaçoes de cartao de credito, usuário nao é cobrado até aceite</li>
+  <li>Efeutar pagamendo quando booking é aprovado</li>
+</ul>
+
