@@ -4,6 +4,7 @@
   <%= params %>
   <br>
   <h2><%= @listing.name %></h2>
+  <h2><%= humanized_money_with_symbol(@listing.rate_cents) %></h2>
   
   <%= link_to "Edit", edit_listing_path(id: @listing), class:"btn btn-danger btn-lg active"  %>
   <%= link_to "book this place", new_listing_booking_path(listing_id: @listing), class:"btn btn-success btn-lg active" %>
@@ -11,7 +12,7 @@
   <ul class="list-group">
       <% @listing.bookings.each do |booking| %>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <%= link_to "User: #{booking.user.email}, CheckIn: #{booking.checkin}, CheckOut: #{booking.checkout}", booking_path(booking) %>
+        <%= link_to "User: #{booking.user.email}, CheckIn: #{booking.checkin}, CheckOut: #{booking.checkout}", listing_booking_path(listing_id: @listing, id: booking.id) %>
         <span class="badge badge-primary badge-pill"><%= booking.status %></span>
       </li>
       <% end %>

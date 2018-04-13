@@ -3,13 +3,14 @@ Rails.application.routes.draw do
   resources :amenities
   
   resources :listings do 
-    resources :bookings
+    resources :bookings do 
+      resources :payments, only: [:new, :create]
+    end
     resources :amenities
   end
-  resources :bookings
   
   resources :user do 
-    resources :bookings, only: [:index, :show, :edit]
+    resources :bookings, only: [:index]
   end
   
 
