@@ -1,8 +1,9 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :listing
+  monetize :amount_cents
   
-  validates :status, inclusion: { in: ["pending", "denied", "approved"], allow_nil: false }
+  validates :status, inclusion: { in: ["pending", "denied", "approved", "canceled"], allow_nil: false }
   validates :checkin, presence: { message: "must be given please" }
   validates :checkout, presence: { message: "must be given please" }
   validates :introduction, length: {
@@ -57,4 +58,25 @@ class Booking < ApplicationRecord
     return false
   end
   
+  # Charge tenant once booking is approved.
+  def charge
+    Stripe::Charge.create(
+      customer:     stripe_token,
+      amount:       500000,
+      description:  "Payment for booking #{id} at order #{listing.name} in #{checkin} to #{checkout}",
+      currency:     amount.currency
+    )
+    rescue Stripe::CardError => e
+      flash[:alert] = e.message
+      redirect_to new_listing_booking_payment_path(listing_id: listing.id ,id: id)
+  end
+  
+  def refund
+    Stripe::Refund::create(
+      charge: chargeid
+    )
+    rescue Stripe::CardError => e
+      flash[:alert] = e.message
+      redirect_to listing_booking_path(listing_id: listing.id ,id: id)
+  end
 end

@@ -16,6 +16,7 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= yield :datepicker_range %>
+    <%= yield :stripe_form %>
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>

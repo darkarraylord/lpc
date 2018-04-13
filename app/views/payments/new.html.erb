@@ -1,0 +1,23 @@
+<div class="container">
+  <% unless @booking.state == 'paid' %>
+    <h1>Payment for booking <%= @booking.id %></h1>
+    
+    <%= form_tag listing_booking_payments_path(listing_id:@booking.listing.id, booking_id: @booking) do %>
+      <article>
+        <label class="amount">
+          <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
+        </label>
+      </article>
+    
+      
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-name="My Teddy"
+        data-email="<%= current_user.email %>"
+        data-description="Teddy <%= @booking.id %>"
+        data-amount= 500000
+        data-currency="<%= @booking.amount.currency %>"></script>
+      
+    <% end %>
+  <% end %>
+</div>

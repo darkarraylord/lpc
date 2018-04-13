@@ -20,6 +20,7 @@ if(reply.strip.downcase == 'yes')
     {
       name: 'Versailles',
       description: 'Palace france',
+      rate: 15,
       photos: [
         'http://en.chateauversailles.fr/sites/default/files/styles/push_image/public/visuels_principaux/cour-de-marbre-vignette-youtube_0.jpg?itok=zPP_fomi',
         'http://www.icon-icon.com/sites/default/files/styles/image_detail/public/field/image/bloggif_592712ccebcad.jpeg?itok=Jeh6bysb'
@@ -28,6 +29,7 @@ if(reply.strip.downcase == 'yes')
     {
       name: 'Buckinghma Palace',
       description: 'UK Palace',
+      rate: 50,
       photos: [
         'https://www.royalcollection.org.uk/sites/default/files/styles/rctr-scale-crop-350-350/public/vimeo-square.jpg?itok=Za2nJpHz',
         'https://www.royalcollection.org.uk/sites/default/files/styles/rctr-scale-1010w/public/residence_teasers/bp-708.jpg?itok=U2HhJB3X'
@@ -57,6 +59,7 @@ if(reply.strip.downcase == 'yes')
   listing_seeds.each do |seed|
     listing = Listing.new
     listing.name = seed[:name]
+    listing.rate = seed[:rate]
     listing.user = User.first
     listing.save!
     #new_estate.photo_urls = estate[:photos]

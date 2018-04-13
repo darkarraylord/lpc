@@ -10,7 +10,24 @@
   <%= link_to "edit this booking", edit_listing_booking_path(listing_id: @booking.listing, id: @booking) if @booking.status != 'approved' && current_user == @booking.user %>
   <br>
   <% if @booking.listing.user == current_user %>
-    <%= link_to "Approve", listing_booking_path(@booking, :booking => { :status => "approved"}), :method => :put, class:"btn btn-success btn-lg active" %>
-    <%= link_to "Deny", listing_booking_path(@booking, :booking => { :status => "denied"}), :method => :put, class:"btn btn-danger btn-lg active", data: { confirm: "Are you sure you want to deny?" } %>
+    <% if @booking.status == 'pending' %>
+      <%= link_to "Approve", listing_booking_path(@booking, :booking => { :status => "approved"}), :method => :put, class:"btn btn-success btn-lg active" %>
+      <%= link_to "Deny", listing_booking_path(@booking, :booking => { :status => "denied"}), :method => :put, class:"btn btn-danger btn-lg active", data: { confirm: "Are you sure you want to deny?" } %>
+    <% elsif @booking.status == 'approved' %>
+      <%= link_to "Cancel", listing_booking_path(@booking, :booking => { :status => "canceled"}), :method => :put, class:"btn btn-danger btn-lg active", data: { confirm: "Are you sure you want to cancel this booking?" } %>
+    <% end %>
   <% end %>
+  
+  <h1>Order</h1>
+  <ul>
+    <li>Status: <%= @booking.state %></li>
+    <li>Item: <%= @booking.id %></li>
+    <li>Amount: <%= humanized_money_with_symbol(@booking.amount) %></li>
+  <ul>
+    <% if current_user == @booking.user%>
+    <%= link_to "Add credit card for payment", new_listing_booking_payment_path(
+      listing_id: @booking.listing.id, 
+      booking_id: @booking
+      ) unless @booking.status == 'approved' && @booking.state == 'paid' %>
+    <% end %>
 </div>
