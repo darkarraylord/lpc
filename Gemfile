@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rails', '5.1.6'
 gem 'redis'
 gem 'pundit'
+gem 'geocoder'
 
 
 source 'https://rails-assets.org' do

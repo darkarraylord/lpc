@@ -1,6 +1,8 @@
 <div class="container">
   <%= simple_form_for @listing do |f| %>
     <%= f.input :name, as: :text, hint: "Enter a name for this listing" %>
+    <%= f.input :address, as: :text, id: "listing_address" %>
+    <%= f.input :rate, as: :integer %>
     <%= f.button :submit, data: { disable_with: "Creating listing..." }, class: "btn btn-primary btn-lg btn-block" %>
   <% end %>
 </div>
