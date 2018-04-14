@@ -1,7 +1,10 @@
 <div class="container">
   <h1>Listings</h1>
   <p>Find me in app/views/pages/home.html.erb</p>
-  <%= link_to "New Listing", new_listing_path, class:"btn btn-primary btn-lg active" %>
+  <% if policy(Listing).create? %>
+    <%= link_to "New Listing", new_listing_path, class:"btn btn-primary btn-lg active" %>
+  <% end %>
+  
   <h3>Available properties: </h3>
   <ul class="list-group">
     <% @listings.each do |listing| %>

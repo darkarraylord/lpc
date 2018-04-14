@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
+  authorize @booking
   def index
-    @listings = current_user.listings
+    @listings = policy_scope(current_user.listings).order(created_at: :desc)
   end
 
   def show
