@@ -2,6 +2,16 @@ class ListingsController < ApplicationController
   
   def index
     @listings = policy_scope(current_user.listings).order(created_at: :desc)
+    
+    @geo_listings = current_user.listings.where.not(latitude: nil, longitude: nil)
+
+    @markers = @geo_listings.map do |listing|
+      {
+        lat: listing.latitude,
+        lng: listing.longitude#,
+        #infoWindow: { content: render_to_string(partial: "/listing/map_box", locals: { listing: listing }) }
+      }
+    end
   end
 
   def show
