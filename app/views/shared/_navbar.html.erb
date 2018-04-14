@@ -8,7 +8,7 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
-
+      <%= current_user.email %> admin: <%= current_user.admin? %>
       <!-- Links when logged in -->
       <%= link_to "My Listings", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "My Bookings", "#", class: "navbar-wagon-item navbar-wagon-link" %>

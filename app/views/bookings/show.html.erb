@@ -7,7 +7,7 @@
   <div class="row">
     <strong>Status: </strong><%= @booking.status %>
   </div>
-  <% if policy(booking).edit? %>
+  <% if policy(@booking).edit? %>
     <%= link_to "edit this booking", edit_listing_booking_path(listing_id: @booking.listing, id: @booking) if @booking.status != 'approved' && current_user == @booking.user %>
   <% end %>
   <br>
