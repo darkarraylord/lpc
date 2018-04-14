@@ -8,6 +8,8 @@ class Listing < ApplicationRecord
   
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+  validates :address, presence: true
+  validates :rate, presence: true
   
   # Return booked dates for listing
   # Dates where this listing is unavailable
