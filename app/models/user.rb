@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :listings
   has_many :bookings
   
-  enum role: [:earl, :owner, :tenant, :admin, :owner]
+  enum role: [:earl, :owner, :tenant, :admin]
   
   after_initialize :set_default_role, :if => :new_record?
 
