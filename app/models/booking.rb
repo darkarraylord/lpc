@@ -2,8 +2,9 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :listing
   monetize :amount_cents
+  enum status: [:pending, :denied, :approved, :canceled]
   
-  validates :status, inclusion: { in: ["pending", "denied", "approved", "canceled"], allow_nil: false }
+  validates :status, presence: true
   validates :checkin, presence: { message: "must be given please" }
   validates :checkout, presence: { message: "must be given please" }
   validates :introduction, length: {

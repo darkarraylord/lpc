@@ -12,8 +12,9 @@ reply = STDIN.gets.chomp
 if(reply.strip.downcase == 'yes') 
 
   user_seeds = [
-    {email: "owner@gmail.com",  password: "Guigui21" },
-    {email: "tenant@gmail.com", password: "Guigui21" }
+    {email: 'gilcpd2@gmail.com', password: 'Guigui21', admin: true  },
+    {email: "owner@gmail.com",   password: "Guigui21", admin: false },
+    {email: "tenant@gmail.com",  password: "Guigui21", admin: false }
   ]
   amenity_seeds = [ 'Outdoor Pool', 'indoor Pool', 'Ball Room', 'Tenis Court', 'Stables']
   listing_seeds = [

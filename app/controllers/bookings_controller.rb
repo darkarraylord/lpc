@@ -1,19 +1,23 @@
 class BookingsController < ApplicationController
+  
   def index
     @bookings = current_user.bookings
   end
   def show
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
   
   def new 
     @listing = Listing.find(params[:listing_id])
     @booking = Booking.new
+    authorize @booking
   end
   
   def create
     @listing = Listing.find(params[:listing_id])
     @booking = @listing.bookings.new(booking_params)
+    authorize @booking
     @booking.user = current_user
     @booking.status = 'pending'
     @booking.state = 'pending'
@@ -37,7 +41,7 @@ class BookingsController < ApplicationController
   
   def update
     @booking = Booking.find(params[:id])
-    
+    authorize @booking
     if @booking.status == 'pending' && params[:booking][:status] == 'approved'
       charge =  @booking.charge
       @booking.update(payment: charge.to_json, chargeid: charge.id, state: 'paid')
