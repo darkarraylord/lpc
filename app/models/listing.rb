@@ -4,6 +4,7 @@ class Listing < ApplicationRecord
   has_many :listing_amenities
   has_many :amenities, :through => :listing_amenities
   has_one :owner, class_name: 'User'
+  has_many :reviews, dependent: :destroy
   monetize :rate_cents
   
   geocoded_by :address
