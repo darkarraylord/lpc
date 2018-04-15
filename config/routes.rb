@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
   
+  get 'reviews/show'
+
+  get 'reviews/new'
+
+  get 'reviews/index'
+
   resources :amenities
   
   resources :listings do 
     resources :bookings do 
       resources :payments, only: [:new, :create]
     end
+    resources :reviews, only: :create
     resources :amenities
   end
   
