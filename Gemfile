@@ -8,14 +8,28 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.1.6'
 gem 'redis'
+gem 'pundit'
+gem 'geocoder'
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 4.7'
+gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+
+gem 'bootstrap-datepicker-rails'
+gem 'money-rails'
+gem 'stripe'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'

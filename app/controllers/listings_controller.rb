@@ -1,18 +1,33 @@
 class ListingsController < ApplicationController
+  
   def index
-    @listings = current_user.listings
+    @listings = policy_scope(current_user.listings).order(created_at: :desc)
+    
+    @geo_listings = current_user.listings.where.not(latitude: nil, longitude: nil)
+
+    @markers = @geo_listings.map do |listing|
+      {
+        lat: listing.latitude,
+        lng: listing.longitude#,
+        #infoWindow: { content: render_to_string(partial: "/listing/map_box", locals: { listing: listing }) }
+      }
+    end
   end
 
   def show
     @listing = Listing.find(params[:id])
+    authorize @listing
+    @review = Review.new
   end
 
   def new
     @listing = Listing.new
+    authorize @listing
   end
   
   def create
     @listing = Listing.new(listing_params)
+    authorize @listing
     @listing.user = current_user
     if @listing.save
       redirect_to listing_path(@listing)
@@ -27,12 +42,14 @@ class ListingsController < ApplicationController
   
   def update
     @listing = Listing.find(params[:id])
+    authorize @listing
     @listing.update(listing_params)
     redirect_to listing_path(@listing)
   end
 
   def destroy
     @listing = Listing.find(params[:id])
+    authorize @listing
     @listing.destroy
     redirect_to listing_path
   end
@@ -40,6 +57,6 @@ class ListingsController < ApplicationController
   private
   
   def listing_params
-    params.require(:listing).permit(:name)
+    params.require(:listing).permit(:name, :rate, :latitude, :longitude, :address)
   end
 end
