@@ -12,7 +12,7 @@ reply = STDIN.gets.chomp
 if(reply.strip.downcase == 'yes') 
 
   user_seeds = [
-    {email: 'gilcpd2@gmail.com', password: 'Guigui21', admin: true  },
+    {email: 'admin@gmail.com', password: 'Guigui21', admin: true  },
     {email: "owner@gmail.com",   password: "Guigui21", admin: false },
     {email: "tenant@gmail.com",  password: "Guigui21", admin: false }
   ]

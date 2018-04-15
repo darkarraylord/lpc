@@ -1,0 +1,18 @@
+=> [32m#<Booking:0x0000559d782126c0[0m
+ id: [1;36mnil[0m,
+ user_id: [1;36mnil[0m,
+ listing_id: [1;36mnil[0m,
+ checkin: [1;36mnil[0m,
+ checkout: [1;36mnil[0m,
+ status: [1;36mnil[0m,
+ total: [1;36mnil[0m,
+ created_at: [1;36mnil[0m,
+ updated_at: [1;36mnil[0m,
+ introduction: [1;36mnil[0m,
+ state: [1;36mnil[0m,
+ amount_cents: [1;34m0[0m,
+ amount_currency: [31m[1;31m"[0m[31mEUR[1;31m"[0m[31m[0m,
+ payment: [1;36mnil[0m,
+ chargeid: [1;36mnil[0m,
+ stripe_token: [1;36mnil[0m,
+ refund_id: [1;36mnil[0m[32m>[0m
