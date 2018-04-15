@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :bookings do 
       resources :payments, only: [:new, :create]
     end
+    resources :reviews, only: :create
     resources :amenities
   end
   
