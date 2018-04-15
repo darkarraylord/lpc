@@ -4,18 +4,30 @@
   <%= params %>
   <br>
   <h2><%= @listing.name %></h2>
+  <h2><%= humanized_money_with_symbol(@listing.rate_cents) %></h2>
   
   <%= link_to "Edit", edit_listing_path(id: @listing), class:"btn btn-danger btn-lg active"  %>
+  <% if policy(Booking).create? %>
   <%= link_to "book this place", new_listing_booking_path(listing_id: @listing), class:"btn btn-success btn-lg active" %>
+  <% end %>
   <h3>Bookings of this listing:</h3>
   <ul class="list-group">
-      <% @listing.bookings.each do |booking| %>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <%= "User: #{booking.user.email}, CheckIn: #{booking.checkin}, CheckOut: #{booking.checkout}" %>
-        <%= link_to "Edit", edit_listing_booking_path(listing_id:booking.listing, id: booking) if current_user == booking.user %>
-        <%= link_to "View Booking Request", listing_booking_path(listing_id:booking.listing, id: booking) if current_user == booking.listing.user %>
-        <span class="badge badge-primary badge-pill"><%= booking.status %></span>
-      </li>
+    <% @listing.bookings.each do |booking| %>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <%= link_to "User: #{booking.user.email}, CheckIn: #{booking.checkin}, CheckOut: #{booking.checkout}", listing_booking_path(listing_id: @listing, id: booking.id) %>
+      <span class="badge badge-primary badge-pill"><%= booking.status %></span>
+    </li>
+    <% end %>
+  </ul>
+  <h3><%= pluralize @listing.reviews.size, "review" %></h3>
+  <div class="reviews">
+    <% if @listing.reviews.blank? %>
+      Be the first to leave a review for <%= @listing.name %>
+    <% else %>
+      <% @listing.reviews.each do |review| %>
+        <%= render 'reviews/show', review: review %>
       <% end %>
-    </ul>
+    <% end %>
   </div>
+  <%= render 'reviews/form', listing: @listing, review: @review %>
+</div>

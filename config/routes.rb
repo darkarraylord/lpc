@@ -1,15 +1,24 @@
 Rails.application.routes.draw do
   
+  ActiveAdmin.routes(self)
+  get 'reviews/show'
+
+  get 'reviews/new'
+
+  get 'reviews/index'
+
   resources :amenities
   
   resources :listings do 
-    resources :bookings
+    resources :bookings do 
+      resources :payments, only: [:new, :create]
+    end
+    resources :reviews, only: :create
     resources :amenities
   end
-  resources :bookings
   
   resources :user do 
-    resources :bookings, only: [:index, :show, :edit]
+    resources :bookings, only: [:index]
   end
   
 
