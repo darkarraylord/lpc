@@ -10,7 +10,8 @@ gem 'rails', '5.1.6'
 gem 'redis'
 gem 'pundit'
 gem 'geocoder'
-
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
