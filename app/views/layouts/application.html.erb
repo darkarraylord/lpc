@@ -1,24 +1,319 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>TODO</title>
+<!doctype html>
+<html class="no-js" lang="en-US">
+<!-- Mirrored from lava.themespirit.com/demo-2/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Apr 2018 10:56:58 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<!-- /Added by HTTrack -->
+
+<head>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-  </head>
-  <body>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two:700%7CRaleway:500" />
+    <script type='text/javascript' src='https://use.fontawesome.com/30858dc40a.js?ver=4.0.7'></script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js?ver=3.0.25'></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="pingback" href="xmlrpc.php">
+    <title>Demo 2 &#8211; Just another Lava Demo Sites site</title>
+    <link rel='dns-prefetch' href='http://use.fontawesome.com/' />
+    <link rel='dns-prefetch' href='http://s.w.org/' />
+    <link rel="alternate" type="application/rss+xml" title="Demo 2 &raquo; Feed" href="feed/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="Demo 2 &raquo; Comments Feed" href="comments/feed/index.html" />
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important
+        }
+    </style>
+    <style id='kirki-styles-global-inline-css' type='text/css'>
+        .site-overlay {
+            background-color: #FFF
+        }
+
+        body {
+            font-family: Hind, Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 1.625;
+            text-transform: none;
+            background-color: #FFF;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: scroll;
+            -webkit-background-size: initial;
+            -moz-background-size: initial;
+            -ms-background-size: initial;
+            -o-background-size: initial;
+            background-size: initial
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lobster Two", "Comic Sans MS", cursive, sans-serif;
+            font-weight: 400;
+            letter-spacing: .1em;
+            line-height: 1.35;
+            text-transform: none
+        }
+
+        .section-heading,
+        .widget-title {
+            font-family: "Lobster Two", "Comic Sans MS", cursive, sans-serif !important;
+            font-weight: 400;
+            letter-spacing: 0.1em !important;
+            text-transform: none !important
+        }
+
+        .fullscreen-menu a {
+            font-family: Hind, Helvetica, Arial, sans-serif;
+            font-weight: 500;
+            letter-spacing: .1em;
+            text-transform: uppercase
+        }
+
+        .nav-menu a {
+            font-family: Hind, Helvetica, Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: .15em;
+            text-transform: uppercase
+        }
+
+        .select2-container .select2-choice:focus,
+        input[type=email]:focus,
+        input[type=number]:focus,
+        input[type=password]:focus,
+        input[type=search]:focus,
+        input[type=tel]:focus,
+        input[type=text]:focus,
+        select:focus,
+        textarea:focus {
+            -webkit-box-shadow: 0 0 5px #AFA278;
+            -moz-box-shadow: 0 0 5px #AFA278;
+            box-shadow: 0 0 5px #AFA278
+        }
+
+        .page-header {
+            background-image: url(<%= image_tag 'demo_page_header.jpg' %>)
+        }
+    </style>
+    <script type="text/javascript">
+        var hotel_settings = {
+            ajax: 'http://lava.themespirit.com/demo-2/wp-admin/admin-ajax.php',
+            settings: {
+                "review_rating_required": "1"
+            },
+            upload_base_url: 'assets/uploads/sites/2',
+            meta_key: {
+                prefix: '_hb_'
+            },
+            nonce: '96f644ab46',
+            timezone: '1523862469',
+            min_booking_date: 1
+        }
+    </script>
+    <script type="text/javascript">
+        var hotel_settings = {
+            ajax: 'http://lava.themespirit.com/demo-2/wp-admin/admin-ajax.php',
+            settings: {
+                "review_rating_required": "1"
+            },
+            upload_base_url: 'assets/uploads/sites/2',
+            meta_key: {
+                prefix: '_hb_'
+            },
+            nonce: '96f644ab46',
+            timezone: '1523862469',
+            min_booking_date: 1
+        }
+    </script>
+    <link rel='https://api.w.org/' href='wp-json/index.html' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 4.9.5" />
+    <link rel="canonical" href="index.html" />
+    <link rel='shortlink' href='index.html' />
+    <link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed427b.json?url=http%3A%2F%2Flava.themespirit.com%2Fdemo-2%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed5020?url=http%3A%2F%2Flava.themespirit.com%2Fdemo-2%2F&amp;format=xml" />
+    <script>
+        var ms_grabbing_curosr = 'wp-content/plugins/masterslider/public/assets/css/common/grabbing.html',
+            ms_grab_curosr = 'wp-content/plugins/masterslider/public/assets/css/common/grab.html';
+    </script>
+    <meta name="generator" content="MasterSlider 3.2.2 - Responsive Touch Image Slider" />
+
+    <style type="text/css" media="all" id="siteorigin-panels-layouts-head">
+        #pgc-36-0-0,
+        #pgc-36-4-0 {
+            width: 100%;
+            width: calc(100% - (0 * 30px))
+        }
+
+        #pg-36-0,
+        #pg-36-1,
+        #pg-36-3,
+        #pg-36-4,
+        #pg-36-5,
+        #pg-36-6,
+        #pl-36 .so-panel:last-child {
+            margin-bottom: 0
+        }
+
+        #pgc-36-1-0,
+        #pgc-36-3-0,
+        #pgc-36-5-0 {
+            width: 100%;
+            width: calc(100% - (0 * 0px))
+        }
+
+        #pgc-36-2-0,
+        #pgc-36-2-1 {
+            width: 50%;
+            width: calc(50% - (0.5 * 30px))
+        }
+
+        #pg-36-2,
+        #pl-36 .so-panel {
+            margin-bottom: 30px
+        }
+
+        #pgc-36-6-0,
+        #pgc-36-6-1 {
+            width: 50%;
+            width: calc(50% - (0.5 * 0px))
+        }
+
+        #pg-36-0.panel-no-style,
+        #pg-36-0.panel-has-style>.panel-row-style,
+        #pg-36-1.panel-no-style,
+        #pg-36-1.panel-has-style>.panel-row-style,
+        #pg-36-2.panel-no-style,
+        #pg-36-2.panel-has-style>.panel-row-style,
+        #pg-36-3.panel-no-style,
+        #pg-36-3.panel-has-style>.panel-row-style,
+        #pg-36-4.panel-no-style,
+        #pg-36-4.panel-has-style>.panel-row-style,
+        #pg-36-5.panel-no-style,
+        #pg-36-5.panel-has-style>.panel-row-style,
+        #pg-36-6.panel-no-style,
+        #pg-36-6.panel-has-style>.panel-row-style {
+            -webkit-align-items: flex-start;
+            align-items: flex-start
+        }
+
+        #panel-36-1-0-0>.panel-widget-style {
+            padding: 30px 30px 0 30px;
+            background: #fff;
+            position: relative;
+            z-index: 1;
+            margin-left: 6%;
+            margin-right: 6%;
+            margin-top: -60px
+        }
+
+        #pg-36-3>.panel-row-style {
+            background-color: #f7f8f4
+        }
+
+        #panel-36-3-0-0>.panel-widget-style,
+        #panel-36-5-0-0>.panel-widget-style {
+            padding: 0 30px 30px 30px
+        }
+
+        #pg-36-4>.panel-row-style {
+            background-color: #191919
+        }
+
+        #panel-36-4-0-0>.panel-widget-style {
+            padding: 0 30px 0 30px
+        }
+
+        #pg-36-5>.panel-row-style {
+            background-color: #f8f8f4
+        }
+
+        @media (max-width:1020px) {
+            #pg-36-0.panel-no-style,
+            #pg-36-0.panel-has-style>.panel-row-style,
+            #pg-36-1.panel-no-style,
+            #pg-36-1.panel-has-style>.panel-row-style,
+            #pg-36-2.panel-no-style,
+            #pg-36-2.panel-has-style>.panel-row-style,
+            #pg-36-3.panel-no-style,
+            #pg-36-3.panel-has-style>.panel-row-style,
+            #pg-36-4.panel-no-style,
+            #pg-36-4.panel-has-style>.panel-row-style,
+            #pg-36-5.panel-no-style,
+            #pg-36-5.panel-has-style>.panel-row-style,
+            #pg-36-6.panel-no-style,
+            #pg-36-6.panel-has-style>.panel-row-style {
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column
+            }
+            #pg-36-0 .panel-grid-cell,
+            #pg-36-1 .panel-grid-cell,
+            #pg-36-2 .panel-grid-cell,
+            #pg-36-3 .panel-grid-cell,
+            #pg-36-4 .panel-grid-cell,
+            #pg-36-5 .panel-grid-cell,
+            #pg-36-6 .panel-grid-cell {
+                margin-right: 0
+            }
+            #pg-36-0 .panel-grid-cell,
+            #pg-36-1 .panel-grid-cell,
+            #pg-36-2 .panel-grid-cell,
+            #pg-36-3 .panel-grid-cell,
+            #pg-36-4 .panel-grid-cell,
+            #pg-36-5 .panel-grid-cell,
+            #pg-36-6 .panel-grid-cell {
+                width: 100%
+            }
+            #pgc-36-2-0,
+            #pgc-36-6-0 {
+                margin-bottom: 30px
+            }
+            #pl-36 .panel-grid-cell {
+                padding: 0
+            }
+            #pl-36 .panel-grid .panel-grid-cell-empty {
+                display: none
+            }
+            #pl-36 .panel-grid .panel-grid-cell-mobile-last {
+                margin-bottom: 0
+            }
+            #panel-36-1-0-0>.panel-widget-style {
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 0
+            }
+        }
+    </style>
+    <%= favicon_link_tag 'favicon-100x100.png' %>
+    <meta name="msapplication-TileImage" content="assets/uploads/sites/2/2018/01/favicon-300x300.png" />
+</head>
+
+<body class="home page-template page-template-page-builder page-template-page-builder-php page page-id-36 _masterslider _msp_version_3.2.2 siteorigin-panels siteorigin-panels-before-js siteorigin-panels-home">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-    <%= yield :datepicker_range %>
-    <%= yield :stripe_form %>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_HEROKU_KEY']}" %>
-    <%= javascript_pack_tag "map" %>
-  </body>
+</body>
 </html>

@@ -1,17 +1,48 @@
-<div class="container">
-  <h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<div id="content">
+  <article id="post-1038" class="full-width post-1038 page type-page status-publish hentry">
+      <div id="pl-1038" class="panel-layout">
+          <div id="pg-1038-0" class="panel-grid panel-has-style">
+              <div class="border-bottom panel-row-style panel-row-style-for-1038-0">
+                  <div id="pgc-1038-0-1" class="panel-grid-cell">
+                      <div id="panel-1038-0-1-0" class="so-panel widget widget_lava-editor panel-first-child panel-last-child" data-index="1">
+                          <div class="panel-widget-style panel-widget-style-for-1038-0-1-0">
+                              <div class="so-widget-lava-editor so-widget-lava-editor-base">
+                                  <div class="container-half equal-height">
+                                      <div class="title-wrapper left-align">
+                                          <h3 class="widget-title">Login</h3></div>
+                                      <div class="lava-text post-content">
+                                          <div role="form" class="wpcf7" lang="en-US" dir="ltr">
+                                              <div class="screen-reader-response"></div>
+                                              <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name))  do |f| %>
+                                                  <p>
+                                                    <span class="wpcf7-form-control-wrap your-name">
+                                                      <%= f.input_field :email, required: true, autofocus: true, input_html: { class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required', size: '40', 'aria-required'=>true, 'aria-invalid'=> false, placeholder: "Email*" } %>
+                                                    </span>
+                                                  </p>
+                                                  <p>
+                                                    <span class="wpcf7-form-control-wrap your-email">
+                                                      <%= f.input_field :password, required: false, input_html: { class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required', size: '40', 'aria-required'=>true, 'aria-invalid'=> false, placeholder: "Password*" } %>
+                                                    </span>
+                                                  </p>
+                                                  <p>
+                                                    <span class="wpcf7-form-control-wrap">
+                                                      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                                                    </span>
+                                                  </p>
+                                                  <p>
+                                                    <%= f.button :submit, "Log in", class: "lava-button-flat lava-button-5ad52bc184263" %>
+                                                  </p>
+                                                  <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                              <% end %>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </article>
 </div>
