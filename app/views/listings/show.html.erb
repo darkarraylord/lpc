@@ -1,33 +1,165 @@
-<div class="container">
-  <h1>Listings#show</h1>
-  <p>Find me in app/views/listings/show.html.erb</p>
-  <%= params %>
-  <br>
-  <h2><%= @listing.name %></h2>
-  <h2><%= humanized_money_with_symbol(@listing.rate_cents) %></h2>
-  
-  <%= link_to "Edit", edit_listing_path(id: @listing), class:"btn btn-danger btn-lg active"  %>
-  <% if policy(Booking).create? %>
-  <%= link_to "book this place", new_listing_booking_path(listing_id: @listing), class:"btn btn-success btn-lg active" %>
-  <% end %>
-  <h3>Bookings of this listing:</h3>
-  <ul class="list-group">
-    <% @listing.bookings.each do |booking| %>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <%= link_to "User: #{booking.user.email}, CheckIn: #{booking.checkin}, CheckOut: #{booking.checkout}", listing_booking_path(listing_id: @listing, id: booking.id) %>
-      <span class="badge badge-primary badge-pill"><%= booking.status %></span>
-    </li>
-    <% end %>
-  </ul>
-  <h3><%= pluralize @listing.reviews.size, "review" %></h3>
-  <div class="reviews">
-    <% if @listing.reviews.blank? %>
-      Be the first to leave a review for <%= @listing.name %>
-    <% else %>
-      <% @listing.reviews.each do |review| %>
-        <%= render 'reviews/show', review: review %>
-      <% end %>
-    <% end %>
-  </div>
-  <%= render 'reviews/form', listing: @listing, review: @review %>
-</div>
+            <div id="content">
+                <article id="post-476" class="sidebar-right post-476 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-double-room">
+                    <div class="page-header" style="background-image:url(<%= image_path 'room_4.jpg' %>);">
+                        <div class="page-header-overlay"></div>
+                        <h1 class="page-title"> Standard Double <span class="page-subtitle">Room</span></h1></div>
+                    <div class="container-full">
+                        <div class="row">
+                            <div class="col x12 m8">
+                                <div id="room-476" class="hb_single_room tp-hotel-booking post-476 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-double-room">
+                                    <div class="summary entry-summary">
+                                        <div class="hb_room_gallery lava-gallery style-thumbnail">
+                                            <div class="main-slider slick-slider">
+                                                <div>
+
+                                                  <%= image_tag 'room_1-1200x675.jpg' %></div>
+                                                <div><%= image_tag 'room_2-1200x675.jpg' %></div>
+                                                <div><%= image_tag 'room_3-1200x675.jpg' %></div>
+                                                <div><%= image_tag 'room_5-1200x675.jpg' %></div>
+                                            </div>
+                                            <div class="thumb-slider slick-slider">
+                                                <div><%= image_tag 'room_1-120x80.jpg' %></div>
+                                                <div><%= image_tag 'room_2-120x80.jpg' %></div>
+                                                <div><%= image_tag 'room_3-120x80.jpg' %></div>
+                                                <div><%= image_tag 'room_5-120x80.jpg' %></div>
+                                            </div>
+                                        </div>
+                                        <div class="hb_room_title cf">
+                                            <h3 class="title"><a href="index.html">Standard Double Room</a></h3>
+                                            <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;180 </span><span class="unit">/ Night</span></div>
+                                        </div>
+                                        <div class="single-room-details">
+                                            <div class="single-room-section">
+                                                <div class="post-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                    <p>Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus nibh Curabitur blandit tempus porttitor.
+                                                        <br /> Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac blandit Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac blandit tempus.</p>
+                                                </div>
+                                            </div>
+                                            <div class="single-room-section">
+                                                <h3 class="section-heading">Additional Information</h3>
+                                                <div class="post-content">Lorem ipsum dolor sit amet, tollit contentiones nec ne, ad has dicta voluptaria, eos cu regione scribentur suscipiantur. Quo homero expetenda ei. Idque maiorum quo ut. Ex debitis adversarium theophrastus vel.</div>
+                                            </div>
+                                            <div class="single-room-section">
+                                                <h3 class="section-heading">Pricing Plans</h3>
+                                                <h4 class="hb_room_pricing_plan_data"> Regular plan</h4>
+                                                <table class="hb_room_pricing_plans">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Mon</th>
+                                                            <th>Tue</th>
+                                                            <th>Wed</th>
+                                                            <th>Thu</th>
+                                                            <th>Fri</th>
+                                                            <th>Sat</th>
+                                                            <th>Sun</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td> &#36;180</td>
+                                                            <td> &#36;180</td>
+                                                            <td> &#36;180</td>
+                                                            <td> &#36;180</td>
+                                                            <td> &#36;180</td>
+                                                            <td> &#36;200</td>
+                                                            <td> &#36;200</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hb_related_rooms tp-hotel-booking">
+                                    <h3 class="section-heading">Other Rooms</h3>
+                                    <div class="hb_room_carousel">
+                                        <div class="slick-slider" data-slick='{"slidesToShow":3}'>
+                                            <div id="room-477" class="post-477 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-double-room">
+                                                <div class="hb_room_inner">
+                                                    <div class="media">
+                                                        <a href="../superior-double/index.html"> <%= image_tag 'room_5-400x300.jpg', width:"400", height:"300" %> </a>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3 class="title"><a href="../superior-double/index.html">Superior Double<span class="subtitle">Room</span></a></h3>
+                                                        <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;230 </span><span class="unit">/ Night</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="room-478" class="post-478 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-double-room">
+                                                <div class="hb_room_inner">
+                                                    <div class="media">
+                                                        <a href="../deluxe-double/index.html"> 
+                                                  <%= image_tag 'room_6-400x300.jpg', width:"400", height:"300" %> </a>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3 class="title"><a href="../deluxe-double/index.html">Deluxe Double<span class="subtitle">Room</span></a></h3>
+                                                        <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;280 </span><span class="unit">/ Night</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col x12 m4">
+                                <aside class="sidebar sticky">
+                                    <div class="sidebar-wrapper"> <a href="#" data-id="476" data-name="Standard Double" class="btn-primary hb_primary" id="hb_room_load_booking_form">Book Now</a>
+                                        <div id="hb_widget_cart-105" class="widget_hb_widget_cart widget">
+                                            <div id="hotel_booking_mini_cart_5ad36b7e4bf83" class="hotel_booking_mini_cart">
+                                                <p class="hb_mini_cart_empty">Your cart is empty.</p>
+                                            </div>
+                                        </div>
+                                        <div id="hb_widget_search-106" class="widget_hb_widget_search widget">
+                                            <h3 class="section-heading">Check Availability</h3>
+                                            <div id="hotel-booking-search-5ad36b7e4c94a" class="hotel-booking-search cf show-label hide-children">
+                                                <form name="hb-search-form" action="http://lava.themespirit.com/check-availability/" class="hb-search-form-5ad36b7e4c8bc">
+                                                    <ul class="hb-form-table">
+                                                        <li class="hb-form-field">
+                                                            <div class="hb-form-field-input hb_input_field">
+                                                                <input type="text" name="check_in_date" id="check_in_date_5ad36b7e4c8bc" class="hb_input_date_check" value="" placeholder="Arrival Date" />
+                                                            </div>
+                                                        </li>
+                                                        <li class="hb-form-field">
+                                                            <div class="hb-form-field-input hb_input_field">
+                                                                <input type="text" name="check_out_date" id="check_out_date_5ad36b7e4c8bc" class="hb_input_date_check" value="" placeholder="Departure Date" />
+                                                            </div>
+                                                        </li>
+                                                        <li class="hb-form-field hb-adult-field">
+                                                            <div class="hb-form-field-input">
+                                                                <select name="adults_capacity">
+                                                                    <option value="53">1</option>
+                                                                    <option value="56">2</option>
+                                                                    <option value="57">3</option>
+                                                                </select>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <input type="hidden" id="nonce" name="nonce" value="64523e8711" />
+                                                    <input type="hidden" name="_wp_http_referer" value="/rooms/standard-double/" />
+                                                    <input type="hidden" name="hotel-booking" value="results" />
+                                                    <input type="hidden" name="action" value="hotel_booking_parse_search_params" />
+                                                    <p class="hb-submit">
+                                                        <button type="submit" class="btn-primary">Check</button>
+                                                    </p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div id="text-107" class="widget_text widget">
+                                            <div class="textwidget">
+                                                <div class="content-box border">
+                                                    <div class="contact-box">
+                                                        <p>RESERVATION SUPPORT</p>
+                                                        <p><b>+855 123 456 78</b></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+    </div>

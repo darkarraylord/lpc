@@ -1,2 +1,142 @@
-
-<%= render 'form' %>
+<div id="content">
+    <article id="post-7" class="sidebar-right post-7 page type-page status-publish hentry">
+        <div class="page-header">
+            <div class="page-header-overlay"></div>
+            <h1 class="page-title">Checkout</h1></div>
+        <div class="hb-booking-steps cf">
+            <div class="hb-booking-step hb-booking-completed"> <span class="step-number">1</span> <span class="step-text">Check Availability</span></div>
+            <div class="hb-booking-step hb-booking-completed"> <span class="step-number">2</span> <span class="step-text">Review</span></div>
+            <div class="hb-booking-step hb-booking-active"> <span class="step-number">3</span> <span class="step-text">Check Out</span></div>
+        </div>
+        <div class="container-full">
+            <div class="row">
+                <div class="col x12 m8">
+                    <div class="main">
+                        <div class="post-content">
+                            <div id="hotel-booking-payment">
+                                <form name="hb-payment-form" id="hb-payment-form" method="post" action="">
+                                    <h3>Booking Rooms</h3>
+                                    <div class="hb-booking-details">
+                                        <table class="hb_table">
+                                            <thead>
+                                                <th class="hb_room_type">Room type</th>
+                                                <th class="hb_capacity">Capacity</th>
+                                                <th class="hb_quantity">Quantity</th>
+                                                <th class="hb_check_in">Check - in</th>
+                                                <th class="hb_check_out">Check - out</th>
+                                                <th class="hb_night">Night</th>
+                                                <th class="hb_gross_total">Gross Total</th>
+                                            </thead>
+                                            <tr class="hb_checkout_item" data-cart-id="999269854f7e338033ee820a2cc09a59">
+                                                <td class="hb_room_type"> <a href="http://lava.themespirit.com/rooms/standard-single/">Standard Single (Single)</a></td>
+                                                <td class="hb_capacity">1 guest</td>
+                                                <td class="hb_quantity">1</td>
+                                                <td class="hb_check_in">April 17, 2018</td>
+                                                <td class="hb_check_out">April 18, 2018</td>
+                                                <td class="hb_night">1</td>
+                                                <td class="hb_gross_total"> &#36;100</td>
+                                            </tr>
+                                            <tr class="hb_coupon">
+                                                <td colspan="8" class="hb-align-center">
+                                                    <input type="text" name="hb-coupon-code" value="" placeholder="Coupon" style="width: 150px; vertical-align: top;" />
+                                                    <button type="button" id="hb-apply-coupon">Apply Coupon</button>
+                                                </td>
+                                            </tr>
+                                            <tr class="hb_sub_total">
+                                                <td colspan="8">Sub Total <span class="hb-align-right hb_sub_total_value"> &#36;100 </span></td>
+                                            </tr>
+                                            <tr class="hb_advance_tax">
+                                                <td colspan="8"> Tax <span class="hb-align-right">&#36;10</span></td>
+                                            </tr>
+                                            <tr class="hb_advance_grand_total">
+                                                <td colspan="8"> Grand Total <span class="hb-align-right hb_grand_total_value">&#36;110</span></td>
+                                            </tr>
+                                            <tr class="hb_advance_payment">
+                                                <td colspan="8"> Advance Payment (50% of Grand Total) <span class="hb-align-right hb_advance_payment_value">&#36;55</span></td>
+                                            </tr>
+                                            <tr class="hb_payment_all">
+                                                <td colspan="8" class="hb-align-right">
+                                                    <label class="hb-align-right">
+                                                        <input type="checkbox" name="pay_all" id="hb_wt_payment_all" class="lava-checkbox" /> I want to pay all </label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <h3>Customer Details</h3>
+                                    <div class="hb-customer cf">
+                                        <div class="hb-order-existing-customer" data-label="-Or-">
+                                            <h4>Existing customer?</h4>
+                                            <div class="hb-form-table">
+                                                <div class="hb-form-field">
+                                                    <div class="hb-form-field-input">
+                                                        <input type="email" name="existing-customer-email" value="" placeholder="Your email here" />
+                                                        <button class="btn-primary" type="button" id="fetch-customer-info">Apply</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hb-addition-information">
+                                        <h4>Addition Information</h4>
+                                        <textarea name="addition_information" rows="3"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col x12 m4">
+                    <aside class="sidebar sticky">
+                        <div class="sidebar-wrapper">
+                            <div id="hb_widget_search-106" class="widget_hb_widget_search widget">
+                                <h3 class="section-heading">Add Credit Card</h3>
+                                <div id="hotel-booking-search-5ad640557a7f7" class="hotel-booking-search cf show-label hide-children">
+                                    <form name="hb-search-form" action="http://lava.themespirit.com/check-availability/" class="hb-search-form-5ad640557a6a6">
+                                        <ul class="hb-form-table">
+                                            <li class="hb-form-field">
+                                                <div class="hb-form-field-input hb_input_field">
+                                                    <input type="text" name="check_in_date" id="check_in_date_5ad640557a6a6" class="hb_input_date_check" value="" placeholder="Arrival Date" />
+                                                </div>
+                                            </li>
+                                            <li class="hb-form-field">
+                                                <div class="hb-form-field-input hb_input_field">
+                                                    <input type="text" name="check_out_date" id="check_out_date_5ad640557a6a6" class="hb_input_date_check" value="" placeholder="Departure Date" />
+                                                </div>
+                                            </li>
+                                            <li class="hb-form-field hb-adult-field">
+                                                <div class="hb-form-field-input">
+                                                    <select name="adults_capacity">
+                                                        <option value="53">1</option>
+                                                        <option value="56">2</option>
+                                                        <option value="57">3</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <input type="hidden" id="nonce" name="nonce" value="41cda7bca7" />
+                                        <input type="hidden" name="_wp_http_referer" value="/checkout/" />
+                                        <input type="hidden" name="hotel-booking" value="results" />
+                                        <input type="hidden" name="action" value="hotel_booking_parse_search_params" />
+                                        <p class="hb-submit">
+                                            <button type="submit" class="btn-primary">Check</button>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="text-107" class="widget_text widget">
+                                <div class="textwidget">
+                                    <div class="content-box border">
+                                        <div class="contact-box">
+                                            <p>RESERVATION SUPPORT</p>
+                                            <p><b>+855 123 456 78</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>

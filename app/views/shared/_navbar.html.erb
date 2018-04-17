@@ -7,29 +7,8 @@
                   <li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-64"><a href="#">Home</a></li>
                   <li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-64"><%= link_to 'Properties', listings_path %></li>
                   <% if user_signed_in? %>
-                  <li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65"><a href="#">Pages</a>
-                      <ul class="sub-menu">
-                          <li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="reservation/index.html">Reservation</a></li>
-                          <li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="about-us/index.html">About Us</a></li>
-                          <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="elements/index.html">Elements</a></li>
-                          <li id="menu-item-69" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69"><a href="404.html">404 Page</a></li>
-                      </ul>
-                  </li>
-                  
-                  <li id="menu-item-70" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70"><a href="#">Properties</a>
-                      <ul class="sub-menu">
-                          <li id="menu-item-71" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71"><a href="rooms/presidential-suite/index.html">Single Room 1</a></li>
-                          <li id="menu-item-72" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72"><a href="rooms/executive-suite/index.html">Single Room 2</a></li>
-                          <li id="menu-item-73" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a href="rooms/standard-single-room/index.html">Single Room 3</a></li>
-                          <li id="menu-item-74" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74"><a href="rooms/standard-double-room/index.html">Single Room 4</a></li>
-                          <li id="menu-item-75" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a href="rooms.html">Rooms Archive</a></li>
-                      </ul>
-                  </li>
-                  <li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76">
-                    <%= link_to 'Properties', listings_path %>
-                  </li>
-                  <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79">
-                    <a href="#">Account</a>
+                    <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79">
+                      <a href="#">Account</a>
                       <ul class="sub-menu">
                           <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80">
                             <a href="rooms/presidential-suite/index.html">Profile</a>
@@ -41,15 +20,16 @@
                             <%= link_to t(".sign_out", default: "Log out"), destroy_user_session_path, method: :delete %>
                           </li>
                       </ul>
-                  </li>
+                    </li>
                   <% else %>
                     <li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79">
                       <%= link_to t(".sign_in", default: "Login"), new_user_session_path %>
                     </li>
                   <% end %>
               </ul>
-          </nav> <a id="nav-close" href="javascript:void(0)"> <span class="nav-icon-x"></span> </a></div>
-      <header id="header" class="header-style-2">
+          </nav> 
+          <a id="nav-close" href="javascript:void(0)"> <span class="nav-icon-x"></span> </a></div>
+          <header id="header" class="header-style-2">
           <div class="header-wrapper header-affix">
               <div class="container-fluid">
                   <nav class="nav">
@@ -71,30 +51,10 @@
                           </li>
                           <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-65">
                           <%= link_to listings_path do %>
-                            <span>Listings</span>
+                            <span>Properties</span>
                           <% end %>
                           </li>
                           <% if user_signed_in? %>
-                          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-65"><a href="#"><span>Pages</span></a>
-                              <ul class="sub-menu">
-                                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="reservation/index.html"><span>Reservation</span></a></li>
-                                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="about-us/index.html"><span>About Us</span></a></li>
-                                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="elements/index.html"><span>Elements</span></a></li>
-                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69"><a href="404.html"><span>404 Page</span></a></li>
-                              </ul>
-                          </li>
-                          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70"><a href="#"><span>Rooms</span></a>
-                              <ul class="sub-menu">
-                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71"><a href="rooms/presidential-suite/index.html"><span>Single Room 1</span></a></li>
-                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72"><a href="rooms/executive-suite/index.html"><span>Single Room 2</span></a></li>
-                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a href="rooms/standard-single-room/index.html"><span>Single Room 3</span></a></li>
-                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74"><a href="rooms/standard-double-room/index.html"><span>Single Room 4</span></a></li>
-                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a href="rooms.html"><span>Rooms Archive</span></a></li>
-                              </ul>
-                          </li>
-                          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a href="../event.html"><span>Events</span></a></li>
-                          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a href="offer.html"><span>Offers</span></a></li>
-                          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="blog/index.html"><span>Blog</span></a></li>
                             <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79">
                               <a href="#">Account</a>
                                 <ul class="sub-menu">
