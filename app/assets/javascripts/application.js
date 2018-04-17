@@ -3,6 +3,8 @@
 //= require rails-ujs
 //= require bootstrap-datepicker
 //= require bootstrap-datepicker/core
+//= require lavahotel.js
+//= require contact-form-7.js
 //= require_tree .
 
 $('.datepicker input').datepicker({

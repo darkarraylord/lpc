@@ -1,17 +1,454 @@
-<div class="container">
-  <h1>Listings</h1>
-  <p>Find me in app/views/pages/home.html.erb</p>
-  <% if policy(Listing).create? %>
-    <%= link_to "New Listing", new_listing_path, class:"btn btn-primary btn-lg active" %>
-  <% end %>
-  
-  <h3>Available properties: </h3>
-  <ul class="list-group">
-    <% @listings.each do |listing| %>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <%= link_to listing.name, listing_path(listing) %>
-      <span class="badge badge-primary badge-pill"><%= humanized_money_with_symbol(listing.rate_cents) %></span>
-    </li>
-  </ul>
-  <% end %>
+<div class="site">
+<article id="post-36" class="full-width post-36 page type-page status-publish hentry">
+    <div id="pl-36" class="panel-layout">
+        <div id="pg-36-0" class="panel-grid panel-no-style">
+            <div id="pgc-36-0-0" class="panel-grid-cell">
+                <div id="panel-36-0-0-0" class="so-panel widget widget_master-slider-main-widget master-slider-main-widget panel-first-child panel-last-child" data-index="0">
+                    <div id="P_MS5ad44bc53cab1" class="master-slider-parent ms-parent-id-1">
+                        <div id="MS5ad44bc53cab1" class="master-slider ms-skin-lava-2">
+                            <div class="ms-slide" data-delay="3" data-fill-mode="fill">
+                                <div class="ms-pattern " style="background-color:rgba(63, 63, 63, 0.7);"></div> 
+                                <%= image_tag '1.jpg' %>
+                                <a href="#" target="_self" class="ms-layer ms-btn ms-btn-box ms-btn-m msp-preset-btn-164" data-ease="easeOutQuint" data-type="button" data-resize="false" data-offset-x="0" data-offset-y="132" data-origin="mc" data-position="normal"> DISCOVER</a>
+                                <div class="ms-layer lava-ms-subtitle msp-cn-1-6" style="" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="17" data-origin="mc" data-position="normal"> RELAX IN OUR LUXURY PROPERTIES</div>
+                                <div class="ms-layer lava-ms-title msp-cn-1-4" style="" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="-81" data-origin="mc" data-position="normal"> Welcome to Le Petit Chateau</div>
+                            </div>
+                            <div class="ms-slide" data-delay="3" data-fill-mode="fill">
+                                <div class="ms-pattern " style="background-color:rgba(63, 63, 63, 0.7);"></div> 
+                                <%= image_tag '2.jpg' %>
+                                <a href="#" target="_self" class="ms-layer ms-btn ms-btn-box ms-btn-m msp-preset-btn-164" data-ease="easeOutQuint" data-type="button" data-resize="false" data-offset-x="0" data-offset-y="132" data-origin="mc" data-position="normal"> DISCOVER</a>
+                                <div class="ms-layer lava-ms-subtitle msp-cn-1-15" style="" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="17" data-origin="mc" data-position="normal"> FOR YOUR LUXURY PROPERTIES</div>
+                                <div class="ms-layer lava-ms-title msp-preset-4" style="" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="-81" data-origin="mc" data-position="normal"> Timeless Luxury</div>
+                            </div>
+                            <div class="ms-slide" data-delay="3" data-fill-mode="fill">
+                                <div class="ms-pattern " style="background-color:rgba(63, 63, 63, 0.7);"></div> 
+                                <%= image_tag '3.jpg' %>
+                                <a href="#" target="_self" class="ms-layer ms-btn ms-btn-box ms-btn-m msp-preset-btn-164" data-ease="easeOutQuint" data-type="button" data-resize="false" data-offset-x="0" data-offset-y="132" data-origin="mc" data-position="normal"> DISCOVER</a>
+                                <div class="ms-layer lava-ms-subtitle msp-cn-1-12" style="" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="17" data-origin="mc" data-position="normal"> Use our concierge service.</div>
+                                <div class="ms-layer lava-ms-title msp-preset-4" style="" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="-81" data-origin="mc" data-position="normal"> Luxury in Details</div>
+                            </div>
+                            <div class="ms-slide" data-delay="3" data-fill-mode="fill">
+                                <div class="ms-pattern " style="background-color:rgba(63, 63, 63, 0.7);"></div> 
+                                <%= image_tag '4.jpg'%>
+                                <a href="#" target="_self" class="ms-layer ms-btn ms-btn-box ms-btn-m msp-preset-btn-164" data-ease="easeOutQuint" data-type="button" data-resize="false" data-offset-x="0" data-offset-y="132" data-origin="mc" data-position="normal"> DISCOVER</a>
+                                <div class="ms-layer lava-ms-subtitle msp-cn-1-9" style="" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="17" data-origin="mc" data-position="normal">Le Petit Chateau</div>
+                                <div class="ms-layer lava-ms-title msp-preset-4" style="" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="-81" data-origin="mc" data-position="normal"> Charm and Style</div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        (window.MSReady = window.MSReady || []).push(function($) {
+
+                            "use strict";
+                            var masterslider_cab1 = new MasterSlider();
+
+                            // slider controls
+                            masterslider_cab1.control('arrows', {
+                                autohide: true,
+                                overVideo: true
+                            });
+                            // slider setup
+                            masterslider_cab1.setup("MS5ad44bc53cab1", {
+                                width: 1000,
+                                height: 500,
+                                minHeight: 0,
+                                space: 2,
+                                start: 1,
+                                grabCursor: true,
+                                swipe: true,
+                                mouse: true,
+                                keyboard: false,
+                                layout: "fullscreen",
+                                wheel: false,
+                                autoplay: true,
+                                instantStartLayers: false,
+                                mobileBGVideo: false,
+                                loop: false,
+                                shuffle: false,
+                                preload: 0,
+                                heightLimit: true,
+                                autoHeight: false,
+                                smoothHeight: true,
+                                endPause: false,
+                                overPause: true,
+                                fillMode: "fill",
+                                centerControls: false,
+                                startOnAppear: false,
+                                layersMode: "center",
+                                autofillTarget: "",
+                                hideLayers: false,
+                                fullscreenMargin: 0,
+                                speed: 20,
+                                dir: "h",
+                                parallaxMode: 'swipe',
+                                view: "flow"
+                            });
+
+
+                            $("head").append("");
+
+                            window.masterslider_instances = window.masterslider_instances || [];
+                            window.masterslider_instances.push(masterslider_cab1);
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div id="pg-36-1" class="panel-grid panel-no-style">
+            <div id="pgc-36-1-0" class="panel-grid-cell">
+                <div id="panel-36-1-0-0" class="so-panel widget widget_lava-search-rooms panel-first-child panel-last-child" data-index="1">
+                    <div class="panel-widget-style panel-widget-style-for-36-1-0-0">
+                        <div class="so-widget-lava-search-rooms so-widget-lava-search-rooms-default-d75171398898">
+                            <div class="room-search">
+                                <div id="hotel-booking-search-5ad44bc551aad" class="hotel-booking-search cf hide-children">
+                                    <form name="hb-search-form" action="http://lava.themespirit.com/demo-2/check-availability/" class="hb-search-form-5ad44bc54d83d">
+                                        <ul class="hb-form-table">
+                                            <li class="hb-form-field">
+                                                <div class="hb-form-field-input hb_input_field"> <input type="text" name="check_in_date" id="check_in_date_5ad44bc54d83d" class="hb_input_date_check" value="April 16, 2018" placeholder="Arrival Date" /></div>
+                                            </li>
+                                            <li class="hb-form-field">
+                                                <div class="hb-form-field-input hb_input_field"> <input type="text" name="check_out_date" id="check_out_date_5ad44bc54d83d" class="hb_input_date_check" value="April 17, 2018" placeholder="Departure Date" /></div>
+                                            </li>
+                                            <li class="hb-form-field hb-adult-field">
+                                                <div class="hb-form-field-input"> <select name="adults_capacity"><option value="0">Guests</option><option value="20">1</option><option value="23">2</option><option value="24">3</option></select></div>
+                                            </li>
+                                        </ul> <input type="hidden" id="nonce" name="nonce" value="c77c156a20" /><input type="hidden" name="_wp_http_referer" value="/demo-2/" /> <input type="hidden" name="hotel-booking" value="results" /> <input type="hidden" name="action" value="hotel_booking_parse_search_params" />
+                                        <p class="hb-submit"> <button type="submit" class="btn-primary">Check</button></p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pg-36-3" class="panel-grid panel-has-style">
+            <div class="container-full panel-row-style panel-row-style-for-36-3">
+                <div id="pgc-36-3-0" class="panel-grid-cell">
+                    <div id="panel-36-3-0-0" class="so-panel widget widget_lava-heading panel-first-child" data-index="5">
+                        <div class="panel-widget-style panel-widget-style-for-36-3-0-0">
+                            <div class="so-widget-lava-heading so-widget-lava-heading-default-d75171398898">
+                                <div class="lava-heading center-align">
+                                    <h3 class="lava-title" style="color:#afa278;font-family:&quot;Lobster Two&quot;;font-size:3rem;font-weight:400;font-style:normal;letter-spacing:0px;text-transform:capitalize;">Discover Our Properties</h3>
+                                    <div class="lava-subtitle">Browse our exclusive l.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="panel-36-3-0-1" class="so-panel widget widget_lava-rooms-carousel panel-last-child" data-index="6">
+                        <div class="so-widget-lava-rooms-carousel so-widget-lava-rooms-carousel-default-d75171398898">
+                            <div class="hb_room_carousel_container tp-hotel-booking">
+                                <div class="text_link"> <a href="rooms/index.html">View All Rooms</a></div>
+                                <div class="hb_room_carousel">
+                                    <div class="slick-slider" data-slick='{&quot;slidesToShow&quot;:4,&quot;arrows&quot;:true,&quot;dots&quot;:true}'>
+                                        <div id="room-60" class="equal-height post-60 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
+                                            <div class="hb_room_inner card">
+                                                <div class="media"> <a href="rooms/presidential-suite/index.html"> 
+                                <%= image_tag 'room_15-400x300.jpg', width:"400", height:"300" %>
+                                 </a></div>
+                                                <div class="info">
+                                                    <h3 class="title"><a href="rooms/presidential-suite/index.html">Presidential Suite</a></h3>
+                                                    <div class="excerpt">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                    </div>
+                                                    <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;800 </span><span class="unit">/ Night</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="room-59" class="equal-height post-59 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
+                                            <div class="hb_room_inner card">
+                                                <div class="media"> <a href="rooms/executive-suite/index.html"> 
+                                <%= image_tag 'room_14-400x300.jpg', width:"400", height:"300" %>
+                                 </a></div>
+                                                <div class="info">
+                                                    <h3 class="title"><a href="rooms/executive-suite/index.html">Executive Suite</a></h3>
+                                                    <div class="excerpt">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                    </div>
+                                                    <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;600 </span><span class="unit">/ Night</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="room-58" class="equal-height post-58 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
+                                            <div class="hb_room_inner card">
+                                                <div class="media"> <a href="rooms/junior-suite/index.html"> 
+                                <%= image_tag 'room_13-400x300.jpg', width:"400", height:"300"%>
+                                 </a></div>
+                                                <div class="info">
+                                                    <h3 class="title"><a href="rooms/junior-suite/index.html">Junior Suite</a></h3>
+                                                    <div class="excerpt">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                    </div>
+                                                    <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;400 </span><span class="unit">/ Night</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="room-57" class="equal-height post-57 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-family-room">
+                                            <div class="hb_room_inner card">
+                                                <div class="media"> <a href="rooms/deluxe-family-room/index.html"> 
+                                <%= image_tag 'room_12-400x300.jpg', width:"400", height:"300" %>
+                                 </a></div>
+                                                <div class="info">
+                                                    <h3 class="title"><a href="rooms/deluxe-family-room/index.html">Deluxe Family Room</a></h3>
+                                                    <div class="excerpt">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                    </div>
+                                                    <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;400 </span><span class="unit">/ Night</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="room-56" class="equal-height post-56 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-family-room">
+                                            <div class="hb_room_inner card">
+                                                <div class="media"> <a href="rooms/superior-family-room/index.html"> 
+                                <%= image_tag 'room_11-400x300.jpg', width:"400", height:"300" %> </a></div>
+                                                <div class="info">
+                                                    <h3 class="title"><a href="rooms/superior-family-room/index.html">Superior Family Room</a></h3>
+                                                    <div class="excerpt">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                    </div>
+                                                    <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;300 </span><span class="unit">/ Night</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="room-55" class="equal-height post-55 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-family-room">
+                                            <div class="hb_room_inner card">
+                                                <div class="media"> 
+                                <%= link_to '#' do %>
+                                    <%= image_tag 'room_10-400x300.jpg', width:"400", height: "300" %>
+                                 <% end %>
+                                 </div>
+                                                <div class="info">
+                                                    <h3 class="title"><a href="rooms/standard-family-room/index.html">Standard Family Room</a></h3>
+                                                    <div class="excerpt">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                    </div>
+                                                    <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;250 </span><span class="unit">/ Night</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="room-54" class="equal-height post-54 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-twin-room">
+                                            <div class="hb_room_inner card">
+                                                <div class="media"> 
+                                <%= link_to '#' do %>
+                                <%= image_tag 'room_9-400x300.jpg', width:"400", height:"300" %>
+                                <% end %>
+                                </div>
+                                                <div class="info">
+                                                    <h3 class="title"><a href="rooms/deluxe-twin-room/index.html">Deluxe Twin Room</a></h3>
+                                                    <div class="excerpt">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                    </div>
+                                                    <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;300 </span><span class="unit">/ Night</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pg-36-4" class="panel-grid panel-has-style">
+            <div class="container-full panel-row-style panel-row-style-for-36-4">
+                <div id="pgc-36-4-0" class="panel-grid-cell">
+                    <div id="panel-36-4-0-0" class="so-panel widget widget_lava-heading panel-first-child" data-index="7">
+                        <div class="panel-widget-style panel-widget-style-for-36-4-0-0">
+                            <div class="so-widget-lava-heading so-widget-lava-heading-default-d75171398898">
+                                <div class="lava-heading center-align">
+                                    <h3 class="lava-title" style="color:#afa278;font-family:&quot;Lobster Two&quot;;font-size:3rem;font-weight:400;font-style:normal;letter-spacing:0px;text-transform:capitalize;">Properties Gallery</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="panel-36-4-0-1" class="so-panel widget widget_lava-image-grid panel-last-child" data-index="8">
+                        <div class="so-widget-lava-image-grid so-widget-lava-image-grid-default-d75171398898">
+                            <div class="lava-image-grid">
+                                <div class="lava-image-grid-filters"><button class="lava-image-filter-item active" data-filter="*">All</button><button class="lava-image-filter-item" data-filter=".room">Room</button><button class="lava-image-filter-item" data-filter=".restaurant">Restaurant</button><button class="lava-image-filter-item" data-filter=".bar">Bar</button><button class="lava-image-filter-item" data-filter=".pool">Pool</button></div>
+                                <div class="lava-image-grid-images" data-layouts="{&quot;desktop&quot;:{&quot;numColumns&quot;:4,&quot;rowHeight&quot;:0,&quot;gutter&quot;:0},&quot;tablet&quot;:{&quot;breakPoint&quot;:1020,&quot;numColumns&quot;:3,&quot;rowHeight&quot;:0,&quot;gutter&quot;:0},&quot;mobile&quot;:{&quot;breakPoint&quot;:460,&quot;numColumns&quot;:1,&quot;rowHeight&quot;:0,&quot;gutter&quot;:0}}">
+                                    <div class="lava-image-item room" data-col-span="1" data-row-span="1"> 
+                                    <%= link_to "assets/uploads/sites/2/2018/01/1.jpg", class: 'swipebox' do %>
+                                    <%= image_tag '1-640x640.jpg', class: "attachment-lava_thumb_medium_s size-lava_thumb_medium_s", width:"640", height:"640" %>
+                                    <div class="lava-image-item-overlay"></div> 
+                                    <% end %>
+                                        <h3 class="lava-image-title"> <a href="#">Presidential Suite</a></h3>
+                                    </div>
+                                    <div class="lava-image-item room" data-col-span="1" data-row-span="1"> 
+                                    <%= link_to "assets/uploads/sites/2/2018/01/room_9.jpg", class: 'swipebox' do %>
+                                    <%= image_tag 'room_9-640x640.jpg', class: "attachment-lava_thumb_medium_s size-lava_thumb_medium_s", width:"640", height:"640" %>
+                                    <div class="lava-image-item-overlay"></div> 
+                                    <% end %>
+                                        <h3 class="lava-image-title"> Deluxe Twin</h3>
+                                    </div>
+                                    <div class="lava-image-item room" data-col-span="1" data-row-span="1"> 
+                                    <%= link_to "assets/uploads/sites/2/2018/01/room_10.jpg", class: 'swipebox' do %>
+                                    <%= image_tag 'room_10-640x640.jpg', class: "attachment-lava_thumb_medium_s size-lava_thumb_medium_s", width:"640", height:"640" %>
+                                    <div class="lava-image-item-overlay"></div> 
+                                    <% end %>
+                                        <h3 class="lava-image-title"> Superior Twin</h3>
+                                    </div>
+                                    <div class="lava-image-item room" data-col-span="1" data-row-span="1"> 
+                                    <%= link_to "assets/uploads/sites/2/2018/01/room_1.jpg", class: 'swipebox' do %>
+                                    <%= image_tag 'room_1-640x640.jpg', class: "attachment-lava_thumb_medium_s size-lava_thumb_medium_s", width:"640", height:"640" %>
+                                    <div class="lava-image-item-overlay"></div> 
+                                    <% end %>
+                                        <h3 class="lava-image-title"> Standard Single</h3>
+                                    </div>
+                                    <div class="lava-image-item room" data-col-span="1" data-row-span="1"> 
+                                    <%= link_to "assets/uploads/sites/2/2018/01/room_3.jpg", class: 'swipebox' do %>
+                                    <%= image_tag 'room_3-640x640.jpg', class: "attachment-lava_thumb_medium_s size-lava_thumb_medium_s", width:"640", height:"640" %>
+                                    <div class="lava-image-item-overlay"></div> 
+                                    <% end %>
+                                        <h3 class="lava-image-title"> Family Room</h3>
+                                    </div>
+                                    <div class="lava-image-item restaurant" data-col-span="1" data-row-span="1"> 
+                                    <%= link_to "assets/uploads/sites/2/2018/01/restaurant.jpg", class: 'swipebox' do %>
+                                    <%= image_tag 'restaurant-640x640.jpg', class: "attachment-lava_thumb_medium_s size-lava_thumb_medium_s", width:"640", height:"640" %>
+                                    <div class="lava-image-item-overlay"></div> 
+                                    <% end %>
+                                        <h3 class="lava-image-title"> <a href="#">Restaurant</a></h3>
+                                    </div>
+                                    <div class="lava-image-item restaurant bar" data-col-span="1" data-row-span="1"> 
+                                    <%= link_to "assets/uploads/sites/2/2018/01/ev_4.jpg", class: 'swipebox' do %>
+                                    <%= image_tag 'ev_4-640x640.jpg', class: "attachment-lava_thumb_medium_s size-lava_thumb_medium_s", width:"640", height:"640" %>
+                                    <div class="lava-image-item-overlay"></div> 
+                                    <% end %>
+                                        <h3 class="lava-image-title"> Bar</h3>
+                                    </div>
+                                    <div class="lava-image-item pool" data-col-span="1" data-row-span="1"> 
+                                    <%= link_to "assets/uploads/sites/2/2018/01/ev_3.jpg", class: 'swipebox' do %>
+                                    <%= image_tag 'ev_3-640x640.jpg', class: "attachment-lava_thumb_medium_s size-lava_thumb_medium_s", width:"640", height:"640" %>
+                                    <div class="lava-image-item-overlay"></div> 
+                                    <% end %>
+                                        <h3 class="lava-image-title"> Swimming Pool</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pg-36-5" class="panel-grid panel-has-style">
+            <div class="container-full panel-row-style panel-row-style-for-36-5">
+                <div id="pgc-36-5-0" class="panel-grid-cell">
+                    <div id="panel-36-5-0-0" class="so-panel widget widget_lava-heading panel-first-child" data-index="9">
+                        <div class="panel-widget-style panel-widget-style-for-36-5-0-0">
+                            <div class="so-widget-lava-heading so-widget-lava-heading-default-d75171398898">
+                                <div class="lava-heading center-align">
+                                    <h3 class="lava-title" style="color:#afa278;font-family:&quot;Lobster Two&quot;;font-size:3rem;font-weight:400;font-style:normal;letter-spacing:0px;text-transform:capitalize;">Testimonials</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="panel-36-5-0-1" class="so-panel widget widget_lava-testimonials panel-last-child" data-index="10">
+                        <div class="so-widget-lava-testimonials so-widget-lava-testimonials-default-d75171398898">
+                            <div class="lava-testimonials column-3">
+                                <div class="slick-slider" data-slick='{"dots":true,"arrows":false,&quot;slidesToShow&quot;:3,&quot;autoplaySpeed&quot;:4000}'>
+                                    <div class="lava-testimonial slick-slide">
+                                        <div class="lava-testimonial-text" style="background-color:#ffffff;">
+                                            <div class="lava-author-image"></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Nul id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                                        </div>
+                                        <div class="lava-testimonial-author">
+                                            <h4 class="lava-author-info"><span class="lava-author-name">Jane Doe</span> <span class="lava-author-title">&middot; Traveller</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="lava-testimonial slick-slide">
+                                        <div class="lava-testimonial-text" style="background-color:#ffffff;">
+                                            <div class="lava-author-image"></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Nul id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                                        </div>
+                                        <div class="lava-testimonial-author">
+                                            <h4 class="lava-author-info"><span class="lava-author-name">John Doe</span> <span class="lava-author-title">&middot; Businessman</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="lava-testimonial slick-slide">
+                                        <div class="lava-testimonial-text" style="background-color:#ffffff;">
+                                            <div class="lava-author-image"></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Nul id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                                        </div>
+                                        <div class="lava-testimonial-author">
+                                            <h4 class="lava-author-info"><span class="lava-author-name">Sam Doe</span> <span class="lava-author-title">&middot; Singer</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="lava-testimonial slick-slide">
+                                        <div class="lava-testimonial-text" style="background-color:#ffffff;">
+                                            <div class="lava-author-image"></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Nul id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                                        </div>
+                                        <div class="lava-testimonial-author">
+                                            <h4 class="lava-author-info"><span class="lava-author-name">King Doe</span> <span class="lava-author-title">&middot; CEO</span></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pg-36-6" class="panel-grid panel-no-style">
+            <div id="pgc-36-6-0" class="panel-grid-cell">
+                <div id="panel-36-6-0-0" class="so-panel widget widget_lava-editor panel-first-child panel-last-child" data-index="11">
+                    <div class="so-widget-lava-editor so-widget-lava-editor-base">
+                        <div class="container-half equal-height">
+                            <div class="lava-text post-content">
+                                <h2><span style="color: #afa278;">Sign Up for Lava Offer</span></h2>
+                                <p>GET EXCLUSIVE NEWS AND UPDATES</p>
+                                <p>
+                                    <script type="text/javascript">
+                                        (function() {
+                                            if (!window.mc4wp) {
+                                                window.mc4wp = {
+                                                    listeners: [],
+                                                    forms: {
+                                                        on: function(event, callback) {
+                                                            window.mc4wp.listeners.push({
+                                                                event: event,
+                                                                callback: callback
+                                                            });
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        })();
+                                    </script>
+                                </p>
+                                <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-141" method="post" data-id="141" data-name="Lava">
+                                    <div class="mc4wp-form-fields">
+                                        <p> <input type="email" name="EMAIL" placeholder="Your email address" required /><br /> <button type="submit" class="mc4wp-form-submit"><span>SUBMIT</span><i class="material-icons" style="color:#afa278;">mail</i></button></p>
+                                    </div>
+                                    <p><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1523862469" /><input type="hidden" name="_mc4wp_form_id" value="141" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /></p>
+                                    <div class="mc4wp-response"></div>
+                                </form>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pgc-36-6-1" class="panel-grid-cell">
+                <div id="panel-36-6-1-0" class="so-panel widget widget_lava-image panel-first-child panel-last-child" data-index="12">
+                    <div class="so-widget-lava-image so-widget-lava-image-default-d75171398898">
+                        <div class="equal-height">
+                            <div class="lava-image">
+                                <div class="lava-image-overlay" style="background-color:#000000;opacity:0.38"></div>
+                                <div class="lava-image-content">
+                                    <h3 class="lava-image-text">Holiday Package</h3>
+                                </div>
+                                <div class="lava-image-holder">
+                                    <%= link_to "#" do %>
+                                    <%= image_tag 'people-lights-firework-new-year-s-eve-960x600.jpg', width: "960", height: "600", class: "lava-image" %>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
 </div>

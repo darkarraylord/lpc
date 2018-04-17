@@ -1,0 +1,268 @@
+
+            <footer id="footer">
+                <div class="footer-top">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col x12 s6 m3 footer-1">
+                                <div id="text-108" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="center-align">
+                                        <%= image_tag 'lava_logo.png', width: '102', height: '68'  %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="lava-social-buttons-109" class="widget widget_lava-social-buttons">
+                                    <div class="so-widget-lava-social-buttons so-widget-lava-social-buttons-default-d75171398898">
+                                        <div class="lava-social-buttons style-a center-align">
+                                            <div class="social-list cf"> <a href="#" target="_blank" title="Facebook"><i class="lava-icon-facebook"></i></a> <a href="#" target="_blank" title="Twitter"><i class="lava-icon-twitter"></i></a> <a href="#" target="_blank" title="Instagram"><i class="lava-icon-instagram"></i></a> <a href="#" target="_blank" title="Pinterest"><i class="lava-icon-pinterest"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col x12 s6 m3 footer-2">
+                                <div id="text-110" class="widget widget_text">
+                                    <h3 class="section-heading">Get In Touch</h3>
+                                    <div class="textwidget">
+                                        <div class="textwidget">
+                                            <p class="address"><i class="material-icons">call</i>+855 123 456 78</p>
+                                            <p class="address"><i class="material-icons">email</i>info@lavahotel.com</p>
+                                            <p class="address"><i class="material-icons">location_on</i>2 W. Studebaker St. Miami Beach, FL 33139</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col x12 s6 m3 footer-3">
+                                <div id="nav_menu-111" class="widget widget_nav_menu">
+                                    <h3 class="section-heading">About Us</h3>
+                                    <div class="menu-lava-demo-footer-container">
+                                        <ul id="menu-lava-demo-footer" class="menu">
+                                            <li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="reservation/index.html">Reservation</a></li>
+                                            <li id="menu-item-81" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81"><a href="rooms.html">Rooms</a></li>
+                                            <li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="about-us/index.html">About Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col x12 s6 m3 footer-4">
+                                <div id="recent-posts-112" class="widget widget_recent_entries">
+                                    <h3 class="section-heading">Latest News</h3>
+                                    <ul>
+                                        <li> <a href="2018/01/23/standard-post-format/index.html">Standard Post Format</a></li>
+                                        <li> <a href="2018/01/23/gallery-post-format/index.html">Gallery Post Format</a></li>
+                                        <li> <a href="2018/01/23/video-post-format/index.html">Video Post Format</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container-fluid">
+                        <div id="copyright"> © 2018 LAVA HOTEL. ALL RIGHTS RESERVED.</div>
+                    </div>
+                </div>
+            </footer> <a id="scroll-top" href="javascript:void(0)"><i class="material-icons">keyboard_arrow_up</i></a></div>
+    </div>
+    <script type="text/html" id="tmpl-hb-minicart-item">
+        <div class="hb_mini_cart_item active" data-cart-id="{{ data.cart_id }}">
+
+            <div class="hb_mini_cart_top">
+
+                <h4 class="hb_title"><a href="{{{ data.permalink }}}">{{ data.name }}</a></h4>
+                <span class="hb_mini_cart_remove"><i class="material-icons">close</i></span>
+
+            </div>
+
+            <div class="hb_mini_cart_number">
+
+                <label>Quantity: </label>
+                <span>{{ data.quantity }}</span>
+
+            </div>
+
+            <# if ( typeof data.extra_packages !=='undefined' && Object.keys( data.extra_packages ).length> 0 ) { #>
+                <div class="hb_mini_cart_price_packages">
+                    <label>Addition Services:</label>
+                    <ul>
+                        <# for ( var i=0 ; i < Object.keys( data.extra_packages ).length; i++ ) { #>
+                            <# var pack=d ata.extra_packages[i]; #>
+                                <li>
+                                    <div class="hb_package_title">
+                                        <a href="#">{{{ pack.package_title }}}</a>
+                                        <span>
+                                        ({{{ pack.package_quantity }}})
+                                        <a href="#" class="hb_package_remove" data-cart-id="{{ pack.cart_id }}"><i class="material-icons">close</i></a>
+                                    </span>
+                                    </div>
+                                </li>
+                                <# } #>
+                    </ul>
+                </div>
+                <# } #>
+
+                    <div class="hb_mini_cart_price">
+
+                        <label>Total: </label>
+                        <span>{{{ data.total }}}</span>
+
+                    </div>
+
+        </div>
+    </script>
+    <script type="text/html" id="tmpl-hb-minicart-footer">
+        <div class="hb_mini_cart_footer">
+
+            <a href="http://lava.themespirit.com/demo-2/checkout/" class="hb_button hb_checkout btn-primary btn-small">Check Out</a>
+            <a href="http://lava.themespirit.com/demo-2/view-cart/" class="hb_button hb_view_cart btn-primary btn-small">View Cart</a>
+
+        </div>
+    </script>
+    <script type="text/html" id="tmpl-hb-minicart-empty">
+        <p class="hb_mini_cart_empty">Your cart is empty!</p>
+    </script>
+    <script type="text/html" id="tmpl-hb-room-load-form-cart">
+        <form action="POST" name="hb-search-results" class="hb-search-room-results hotel-booking-search hotel-booking-single-room-action">
+            <div class="hb-booking-room-form-head">
+                <h2 class="hb-room-name">Homepage</h2>
+                <p class="description">Please select number of room and packages (optional)</p>
+            </div>
+            <div class="hb-search-results-form-container cf">
+
+                <# if ( typeof data.qty !=='undefined' ) { #>
+                    <div class="hb-booking-room-form-group">
+                        <div class="hb-booking-room-form-field hb-form-field-input">
+
+                            <select name="hb-num-of-rooms" class="number_room_select">
+                            <option value="">Rooms</option>
+                            <# for( var i = 1; i <= data.qty; i++ ) { #>
+                                <option value="{{ i }}">{{ i }}</option>
+                            <# } #>
+                        </select>
+
+                        </div>
+                    </div>
+                    <# } #>
+            </div>
+            <div class="hb-booking-room-form-footer">
+                <input type="hidden" name="check_in_date_text" value="{{ data.check_in_date_text }}" />
+                <input type="hidden" name="check_out_date_text" value="{{ data.check_out_date_text }}" />
+                <input type="hidden" name="check_in_date" value="{{ data.check_in_date }}" />
+                <input type="hidden" name="check_out_date" value="{{ data.check_out_date }}" />
+                <input type="hidden" name="room-id" value="36" />
+                <input type="hidden" name="action" value="hotel_booking_ajax_add_to_cart" />
+                <input type="hidden" name="is_single" value="1" />
+                <input type="hidden" id="nonce" name="nonce" value="96f644ab46" /><input type="hidden" name="_wp_http_referer" value="index.html" />
+                <a href="#" data-template="hb-room-load-form" class="hb_previous_step btn-primary">Previous</a>
+                <button type="submit" class="hb_add_to_cart btn-primary">Add To Cart</button>
+            </div>
+        </form>
+    </script>
+    <script type='text/javascript'>
+        jQuery(document).ready(function(jQuery) {
+            jQuery.datepicker.setDefaults({
+                "closeText": "Close",
+                "currentText": "Today",
+                "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                "nextText": "Next",
+                "prevText": "Previous",
+                "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+                "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"],
+                "dateFormat": "MM d, yy",
+                "firstDay": 1,
+                "isRTL": false
+            });
+        });
+    </script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var hotel_booking_i18n = {
+            "invalid_email": "Your email address is invalid.",
+            "no_payment_method_selected": "Please select your payment method.",
+            "confirm_tos": "Please accept our Terms and Conditions.",
+            "no_rooms_selected": "Please select at least one the room.",
+            "empty_customer_title": "Please select your title.",
+            "empty_customer_first_name": "Please enter your first name.",
+            "empty_customer_last_name": "Please enter your last name.",
+            "empty_customer_address": "Please enter your address.",
+            "empty_customer_city": "Please enter your city name.",
+            "empty_customer_state": "Please enter your state.",
+            "empty_customer_postal_code": "Please enter your postal code.",
+            "empty_customer_country": "Please select your country.",
+            "empty_customer_phone": "Please enter your phone number.",
+            "customer_email_invalid": "Your email is invalid.",
+            "customer_email_not_match": "Your email does not match with existing email! Ok to create a new customer information.",
+            "empty_check_in_date": "Please select check in date.",
+            "empty_check_out_date": "Please select check out date.",
+            "check_in_date_must_be_greater": "Check in date must be greater than the current.",
+            "check_out_date_must_be_greater": "Check out date must be greater than the check in.",
+            "enter_coupon_code": "Please enter coupon code.",
+            "review_rating_required": "Please select a rating.",
+            "waring": {
+                "room_select": "Please select room number.",
+                "try_again": "Please try again!"
+            },
+            "date_time_format": "MM dd, yy",
+            "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            "dayNamesMin": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+            "date_start": "1",
+            "view_cart": "View Cart",
+            "cart_url": "http:\/\/lava.themespirit.com\/demo-2\/view-cart\/"
+        };
+        var hotel_booking_i18n = {
+            "invalid_email": "Your email address is invalid.",
+            "no_payment_method_selected": "Please select your payment method.",
+            "confirm_tos": "Please accept our Terms and Conditions.",
+            "no_rooms_selected": "Please select at least one the room.",
+            "empty_customer_title": "Please select your title.",
+            "empty_customer_first_name": "Please enter your first name.",
+            "empty_customer_last_name": "Please enter your last name.",
+            "empty_customer_address": "Please enter your address.",
+            "empty_customer_city": "Please enter your city name.",
+            "empty_customer_state": "Please enter your state.",
+            "empty_customer_postal_code": "Please enter your postal code.",
+            "empty_customer_country": "Please select your country.",
+            "empty_customer_phone": "Please enter your phone number.",
+            "customer_email_invalid": "Your email is invalid.",
+            "customer_email_not_match": "Your email does not match with existing email! Ok to create a new customer information.",
+            "empty_check_in_date": "Please select check in date.",
+            "empty_check_out_date": "Please select check out date.",
+            "check_in_date_must_be_greater": "Check in date must be greater than the current.",
+            "check_out_date_must_be_greater": "Check out date must be greater than the check in.",
+            "enter_coupon_code": "Please enter coupon code.",
+            "review_rating_required": "Please select a rating.",
+            "waring": {
+                "room_select": "Please select room number.",
+                "try_again": "Please try again!"
+            },
+            "date_time_format": "MM dd, yy",
+            "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            "dayNamesMin": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+            "date_start": "1",
+            "view_cart": "View Cart",
+            "cart_url": "http:\/\/lava.themespirit.com\/demo-2\/view-cart\/"
+        }; /* ]]> */
+    </script>
+    <script type='text/javascript'>
+        WebFont.load({
+            google: {
+                families: ['Hind:400,500,600,300,700:cyrillic,cyrillic-ext,devanagari,greek,greek-ext,khmer,latin,latin-ext,vietnamese,hebrew,arabic,bengali,gujarati,tamil,telugu,thai', 'Lobster Two:400,700:cyrillic,cyrillic-ext,devanagari,greek,greek-ext,khmer,latin,latin-ext,vietnamese,hebrew,arabic,bengali,gujarati,tamil,telugu,thai']
+            }
+        });
+        WebFont.load({
+            google: {
+                families: ['Hind:400,500,600,300,700:cyrillic,cyrillic-ext,devanagari,greek,greek-ext,khmer,latin,latin-ext,vietnamese,hebrew,arabic,bengali,gujarati,tamil,telugu,thai', 'Lobster Two:400,700:cyrillic,cyrillic-ext,devanagari,greek,greek-ext,khmer,latin,latin-ext,vietnamese,hebrew,arabic,bengali,gujarati,tamil,telugu,thai']
+            }
+        });
+    </script>
+    <!--[if lte IE 9]> <script type='text/javascript' src='http://lava.themespirit.com/demo-2/wp-content/plugins/mailchimp-for-wp/assets/js/third-party/placeholders.min.js?ver=4.2'></script> <![endif]-->
+    <script type="text/javascript">
+        document.body.className = document.body.className.replace("siteorigin-panels-before-js", "");
+    </script>
