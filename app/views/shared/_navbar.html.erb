@@ -4,25 +4,30 @@
       <div class="nav-overlay">
           <nav class="nav">
               <ul id="menu-lava-demo-main" class="fullscreen-menu">
-                  <li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-64"><a href="#">Home</a></li>
-                  <li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-64"><%= link_to 'Properties', listings_path %></li>
-                  <% if user_signed_in? %>
-                  <li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-78"><%= link_to 'Bookings', user_bookings_path %></li>
-                    <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79">
-                      <a href="#">Account</a>
-                      <ul class="sub-menu">
-                          <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80">
-                            <a href="rooms/presidential-suite/index.html">Profile</a>
-                          </li>
-                          <li id="menu-item-81" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81">
-                            <a href="rooms/executive-suite/index.html">Account Settings</a>
-                          </li>
-                          <li id="menu-item-82" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82">
-                            <%= link_to t(".sign_out", default: "Log out"), destroy_user_session_path, method: :delete %>
-                          </li>
-                      </ul>
-                    </li>
-                  <% else %>
+                <li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-64"><a href="#">Home</a></li>
+                <li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-64"><%= link_to 'Properties', listings_path %></li>
+                <% if user_signed_in? %>
+                <li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-78">
+                  <%= link_to 'Bookings', user_bookings_path(user_id: current_user) %>
+                </li>
+                  <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79">
+                    <a href="#">Account</a>
+                    <ul class="sub-menu">
+                        <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80">
+                          <a href="rooms/presidential-suite/index.html">Profile</a>
+                        </li>
+                        <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80">
+                          <%= link_to "Create New Listing", new_listing_path %>
+                        </li>
+                        <li id="menu-item-81" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81">
+                          <a href="rooms/executive-suite/index.html">Account Settings</a>
+                        </li>
+                        <li id="menu-item-82" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82">
+                          <%= link_to t(".sign_out", default: "Log out"), destroy_user_session_path, method: :delete %>
+                        </li>
+                    </ul>
+                  </li>
+                <% else %>
                     <li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79">
                       <%= link_to t(".sign_in", default: "Login"), new_user_session_path %>
                     </li>
@@ -61,6 +66,9 @@
                                 <ul class="sub-menu">
                                     <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80">
                                       <a href="rooms/presidential-suite/index.html">Profile</a>
+                                    </li>
+                                    <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80">
+                                      <%= link_to "Create New Listing", new_listing_path %>
                                     </li>
                                     <li id="menu-item-81" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81">
                                       <a href="rooms/executive-suite/index.html">Account Settings</a>
