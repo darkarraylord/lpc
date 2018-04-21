@@ -1,17 +1,22 @@
 class ListingsController < ApplicationController
-  
-  def index
-    @listings = policy_scope(current_user.listings).order(created_at: :desc)
-    
-    @geo_listings = current_user.listings.where.not(latitude: nil, longitude: nil)
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
-    @markers = @geo_listings.map do |listing|
-      {
-        lat: listing.latitude,
-        lng: listing.longitude#,
-        #infoWindow: { content: render_to_string(partial: "/listing/map_box", locals: { listing: listing }) }
-      }
+
+  def index
+    if params[:query].present?
+      @listings = policy_scope(Listing.where.not(latitude: nil, longitude: nil)).order(created_at: :desc)
+    else
+      @listings = policy_scope(Listing.where.not(latitude: nil, longitude: nil)).order(created_at: :desc)
+      
+      @markers = @listings.map do |listing|
+        {
+          lat: listing.latitude,
+          lng: listing.longitude#,
+          #infoWindow: { content: render_to_string(partial: "/listing/map_box", locals: { listing: listing }) }
+        }
+      end
     end
+    
   end
 
   def show
