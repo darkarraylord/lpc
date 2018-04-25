@@ -113,36 +113,7 @@
             background-image: url(<%= image_tag 'demo_page_header.jpg' %>)
         }
     </style>
-    <script type="text/javascript">
-        var hotel_settings = {
-            ajax: 'http://lava.themespirit.com/demo-2/wp-admin/admin-ajax.php',
-            settings: {
-                "review_rating_required": "1"
-            },
-            upload_base_url: 'assets/uploads/sites/2',
-            meta_key: {
-                prefix: '_hb_'
-            },
-            nonce: '96f644ab46',
-            timezone: '1523862469',
-            min_booking_date: 1
-        }
-    </script>
-    <script type="text/javascript">
-        var hotel_settings = {
-            ajax: 'http://lava.themespirit.com/demo-2/wp-admin/admin-ajax.php',
-            settings: {
-                "review_rating_required": "1"
-            },
-            upload_base_url: 'assets/uploads/sites/2',
-            meta_key: {
-                prefix: '_hb_'
-            },
-            nonce: '96f644ab46',
-            timezone: '1523862469',
-            min_booking_date: 1
-        }
-    </script>
+    
     <link rel='https://api.w.org/' href='wp-json/index.html' />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
@@ -313,7 +284,20 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' %>
+    <script type="text/javascript">
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-7078796-5']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_HEROKU_KEY']}" %>
+    <%= javascript_pack_tag "map" %>
+    <%= cloudinary_js_config %>
     <%= javascript_pack_tag 'application' %>
 </body>
 </html>

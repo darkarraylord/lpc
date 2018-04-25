@@ -43,6 +43,7 @@ class ListingsController < ApplicationController
 
   def edit
     @listing = Listing.find(params[:id])
+    authorize @listing
   end
   
   def update
@@ -62,6 +63,6 @@ class ListingsController < ApplicationController
   private
   
   def listing_params
-    params.require(:listing).permit(:name, :rate, :latitude, :longitude, :address)
+    params.require(:listing).permit(:name, :rate, :latitude, :longitude, :address, photos: [])
   end
 end
