@@ -8,10 +8,6 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.1.6'
 gem 'redis'
-gem 'pundit'
-gem 'geocoder'
-gem 'activeadmin', github: 'activeadmin/activeadmin'
-gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
@@ -29,6 +25,14 @@ gem 'webpacker'
 gem 'bootstrap-datepicker-rails'
 gem 'money-rails'
 gem 'stripe'
+gem 'pundit'
+gem 'geocoder'
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'cloudinary'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+gem 'coffee-rails'
 
 
 group :development do

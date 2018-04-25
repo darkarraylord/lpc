@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
   
   ActiveAdmin.routes(self)
-  get 'reviews/show'
+  mount Attachinary::Engine => "/attachinary"
 
-  get 'reviews/new'
-
-  get 'reviews/index'
 
   resources :amenities
   
