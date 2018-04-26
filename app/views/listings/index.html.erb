@@ -36,127 +36,28 @@
     <div class="background-light full-width">
         <div class="container-full">
             <div class="hb-rooms hb-catalog-column-4">
-                <div id="room-60" class="post-60 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
+                <% @listings.each_with_index do |listing, index| %>
+                 <div id="room-#{index}" class="post-#{index} hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
                     <div class="card">
                         <div class="media">
-                            <%= link_to listing_path(id: 4) do %>
-                            <%= image_tag 'room_15-400x300.jpg', width:"400", height:"300"%>
+                            <%= link_to listing_path(id: listing.id) do %>
+                                <%= cl_image_tag listing.photos.first.path, :crop => "fill", :width => 400, :height => 300 %>
                             <% end %>
                         </div>
                         <div class="info">
-                            <h3 class="title"><%= link_to 'Presidential Suite', listing_path(id: 4) %></h3>
+                            <h3 class="title"><%= link_to listing.name, listing_path(id: listing.id) %></h3>
                             <div class="excerpt">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </div>
-                            <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;800 </span><span class="unit">/ Night</span></div> 
-                            <a href="rooms/presidential-suite/index.html" class="btn-secondary">Details</a></div>
-                    </div>
-                </div>
-                <div id="room-59" class="post-59 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
-                    <div class="card">
-                        <div class="media">
-                            <a href="rooms/executive-suite/index.html"> 
-                            <%= image_tag "room_14-400x300.jpg", width:"400", height:"300"%>
-                            </a>
+                            <div class="price"> 
+                                <span class="title-price">Price:</span> 
+                                <span class="price_value price_min"><%= humanized_money_with_symbol(listing.rate_cents) %> </span>
+                                <span class="unit">/ Night</span></div> 
+                                <%= link_to listing_path(id: listing.id), class: "btn-secondary" %>
+                            </div>
                         </div>
-                        <div class="info">
-                            <h3 class="title"><a href="rooms/executive-suite/index.html">Executive Suite</a></h3>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;600 </span><span class="unit">/ Night</span></div> <a href="rooms/executive-suite/index.html" class="btn-secondary">Details</a></div>
-                    </div>
-                </div>
-                <div id="room-58" class="post-58 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
-                    <div class="card">
-                        <div class="media">
-                            <a href="rooms/junior-suite/index.html"> 
-                            <%= image_tag "room_13-400x300.jpg", width:"400", height:"300" %>
-                            </a>
-                        </div>
-                        <div class="info">
-                            <h3 class="title"><a href="rooms/junior-suite/index.html">Junior Suite</a></h3>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;400 </span><span class="unit">/ Night</span></div> <a href="rooms/junior-suite/index.html" class="btn-secondary">Details</a></div>
-                    </div>
-                </div>
-                <div id="room-57" class="post-57 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-family-room">
-                    <div class="card">
-                        <div class="media">
-                            <a href="rooms/deluxe-family-room/index.html"> 
-                                <%= image_tag "room_12-400x300.jpg", width:"400", height:"300" %>
-                            </a>
-                        </div>
-                        <div class="info">
-                            <h3 class="title"><a href="rooms/deluxe-family-room/index.html">Deluxe Family Room</a></h3>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;400 </span><span class="unit">/ Night</span></div> <a href="rooms/deluxe-family-room/index.html" class="btn-secondary">Details</a></div>
-                    </div>
-                </div>
-                <div id="room-56" class="post-56 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-family-room">
-                    <div class="card">
-                        <div class="media">
-                            <a href="rooms/superior-family-room/index.html"> 
-                            <%= image_tag "room_11-400x300.jpg", width:"400", height:"300" %>
-                            </a>
-                        </div>
-                        <div class="info">
-                            <h3 class="title"><a href="rooms/superior-family-room/index.html">Superior Family Room</a></h3>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;300 </span><span class="unit">/ Night</span></div> <a href="rooms/superior-family-room/index.html" class="btn-secondary">Details</a></div>
-                    </div>
-                </div>
-                <div id="room-55" class="post-55 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-family-room">
-                    <div class="card">
-                        <div class="media">
-                            <a href="rooms/standard-family-room/index.html"> 
-                            <%= image_tag "room_10-400x300.jpg", width:"400", height:"300" %>
-                            
-                        </div>
-                        <div class="info">
-                            <h3 class="title"><a href="rooms/standard-family-room/index.html">Standard Family Room</a></h3>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;250 </span><span class="unit">/ Night</span></div> <a href="rooms/standard-family-room/index.html" class="btn-secondary">Details</a></div>
-                    </div>
-                </div>
-                <div id="room-54" class="post-54 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-twin-room">
-                    <div class="card">
-                        <div class="media">
-                            <a href="rooms/deluxe-twin-room/index.html"> 
-                                <%= image_tag "room_9-400x300.jpg", width:"400", height:"300" %>
-                            </a>
-                        </div>
-                        <div class="info">
-                            <h3 class="title"><a href="rooms/deluxe-twin-room/index.html">Deluxe Twin Room</a></h3>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;300 </span><span class="unit">/ Night</span></div> <a href="rooms/deluxe-twin-room/index.html" class="btn-secondary">Details</a></div>
-                    </div>
-                </div>
-                <div id="room-53" class="post-53 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-twin-room">
-                    <div class="card">
-                        <div class="media">
-                            <a href="rooms/superior-twin-room/index.html"> 
-                                <%= image_tag "room_8-400x300.jpg", width:"400", height:"300" %>
-                            </a>
-                        </div>
-                        <div class="info">
-                            <h3 class="title"><a href="rooms/superior-twin-room/index.html">Superior Twin Room</a></h3>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="price"> <span class="title-price">Price:</span> <span class="price_value price_min">&#36;250 </span><span class="unit">/ Night</span></div> <a href="rooms/superior-twin-room/index.html" class="btn-secondary">Details</a></div>
-                    </div>
-                </div>
+                    </div>   
+                <% end %>
             </div>
             <nav class="pagination numeric">
                 <div class="pagination-wrapper cf"> <span aria-current='page' class='page-numbers current'>1</span> <a class='page-numbers' href='rooms/page/2/index.html'>2</a> <a class="next page-numbers" href="rooms/page/2/index.html"><i class="material-icons">keyboard_arrow_right</i></a></div>
