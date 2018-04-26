@@ -40,12 +40,12 @@
                  <div id="room-#{index}" class="post-#{index} hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
                     <div class="card">
                         <div class="media">
-                            <%= link_to listing_path(id: listing.id) do %>
+                            <%= link_to listing_path(listing) do %>
                                 <%= cl_image_tag listing.photos.first.path, :crop => "fill", :width => 400, :height => 300 %>
                             <% end %>
                         </div>
                         <div class="info">
-                            <h3 class="title"><%= link_to listing.name, listing_path(id: listing.id) %></h3>
+                            <h3 class="title"><%= link_to listing.name, listing_path(listing) %></h3>
                             <div class="excerpt">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </div>
@@ -53,15 +53,15 @@
                                 <span class="title-price">Price:</span> 
                                 <span class="price_value price_min"><%= humanized_money_with_symbol(listing.rate_cents) %> </span>
                                 <span class="unit">/ Night</span></div> 
-                                <%= link_to listing_path(id: listing.id), class: "btn-secondary" %>
+                                <%= link_to listing_path(listing), class: "btn-secondary" %>
                             </div>
                         </div>
                     </div>   
                 <% end %>
             </div>
-            <nav class="pagination numeric">
-                <div class="pagination-wrapper cf"> <span aria-current='page' class='page-numbers current'>1</span> <a class='page-numbers' href='rooms/page/2/index.html'>2</a> <a class="next page-numbers" href="rooms/page/2/index.html"><i class="material-icons">keyboard_arrow_right</i></a></div>
-            </nav>
+            <div class="pagination-wrapper cf"> 
+             <%= paginate @listings %>
+            </div>
         </div>
     </div>
 </div>
