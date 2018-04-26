@@ -327,6 +327,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-fileupload-rails
   jquery-rails
+  kaminari
   listen (~> 3.0.5)
   money-rails
   pg (~> 0.21)

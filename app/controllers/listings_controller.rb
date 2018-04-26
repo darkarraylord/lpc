@@ -4,9 +4,9 @@ class ListingsController < ApplicationController
 
   def index
     if params[:query].present?
-      @listings = policy_scope(Listing.where.not(latitude: nil, longitude: nil)).order(created_at: :desc)
+      @listings = policy_scope(Listing.where.not(latitude: nil, longitude: nil, visible: false)).order(created_at: :desc).page params[:page]
     else
-      @listings = policy_scope(Listing.where.not(latitude: nil, longitude: nil)).order(created_at: :desc)
+      @listings = policy_scope(Listing.where.not(latitude: nil, longitude: nil)).order(created_at: :desc).order(created_at: :desc).page params[:page]
       
       @markers = @listings.map do |listing|
         {

@@ -7,6 +7,7 @@ class Listing < ApplicationRecord
   has_many :reviews, dependent: :destroy
   monetize :rate_cents
   has_attachments :photos, maximum: 50
+  paginates_per 3
   
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
