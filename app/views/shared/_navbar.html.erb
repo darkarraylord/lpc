@@ -4,7 +4,7 @@
       <div class="nav-overlay">
           <nav class="nav">
               <ul id="menu-lava-demo-main" class="fullscreen-menu">
-                <li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-64"><%= link_to "Home", root %></li>
+                <li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-64"><%= link_to "Home" %></li>
                 <li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-64"><%= link_to 'Properties', listings_path %></li>
                 <% if user_signed_in? %>
                 <li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-78">
@@ -33,17 +33,17 @@
                     </li>
                   <% end %>
               </ul>
-          </nav> 
+          </nav>
           <a id="nav-close" href="javascript:void(0)"> <span class="nav-icon-x"></span> </a></div>
           <header id="header" class="header-style-2">
           <div class="header-wrapper header-affix">
               <div class="container-fluid">
                   <nav class="nav">
-                      <div class="logo-wrapper"> 
+                      <div class="logo-wrapper">
                       <%= link_to root_path, class: 'logo' do %>
                       <%= image_tag 'lava_logo_light.png', class: 'logo-retina', width: '102', height: '68',retina: true %>
                       <% end %>
-                      
+
                       <%= link_to root_path, class: 'small-logo' do %>
                         <%= image_tag 'lava_small_logo.png', class: 'logo-retina' %>
                       <% end %>
