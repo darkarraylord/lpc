@@ -3815,10 +3815,10 @@ p img.alignnone{
     height:auto;
     vertical-align:middle
 }
-.small-logo img{
-    max-height:50px;
-    max-width:50px
-}
+// .small-logo img{
+//     max-height:50px;
+//     max-width:50px
+// }
 .hamburger{
     cursor:pointer;
     width:80px;
@@ -4471,7 +4471,8 @@ p img.alignnone{
 }
 #footer .address{
     color:#898989;
-    transition:color .4s
+    transition:color .4s;
+    cursor: pointer;
 }
 #footer .address:hover{
     color:#fff
@@ -5297,18 +5298,14 @@ p img.alignnone{
     background-repeat:no-repeat;
     background-size:cover;
     position:relative;
-    min-height:300px
+    height: 20vh;
 }
 @media (min-width:768px){
     .page-header{
         min-height:450px
     }
 }
-@media (min-width:1200px){
-    .page-header{
-        min-height:600px
-    }
-}
+
 .page-header .page-title{
     color:#fff;
     font-size:35px;
@@ -5344,7 +5341,6 @@ p img.alignnone{
     .page-header .page-title{
         font-size:75px;
         font-size:3.75rem;
-        padding:330px 12% 180px
     }
 }
 .page-header .page-subtitle{
@@ -5368,7 +5364,7 @@ p img.alignnone{
     }
 }
 .page-header-overlay{
-    background-color:rgba(63,63,63,.7);
+    background-color:rgba(100,80,50,0.5);
     position:absolute;
     top:0;
     left:0;
@@ -6478,7 +6474,7 @@ p img.alignnone{
 }
 .room-gallery-slider .slide-overlay{
     background-color:transparent;
-    cursor:crosshair;
+    cursor:pointer;
     position:absolute;
     top:0;
     left:0;
@@ -7314,10 +7310,21 @@ div.lava-image .lava-image-holder a{
     font-weight:500;
     line-height:24px;
     letter-spacing:.1em;
-    margin-top:30px;
     position:relative;
-    text-transform:uppercase
+    text-transform:uppercase;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid #afa278;
+    background-color: white;
 }
+
+.lava-testimonial-author h4 {
+  margin: 0px;
+}
+
+
 .lava-testimonial-author:after{
     position:absolute;
     content:"";
@@ -8145,7 +8152,7 @@ hr.gradient{
     display:inline-block
 }
 .lava-image-item:hover>a{
-    cursor:crosshair
+    cursor:pointer
 }
 .lava-image-item:hover .lava-image-title{
     opacity:1;
@@ -8728,8 +8735,14 @@ hr.gradient{
     width:100%;
     min-width:100%;
     padding:20px 36px;
-    padding:1.05rem 1.8rem
+    padding:1.05rem 1.8rem;
 }
+
+.hb-submit .btn-primary:hover {
+  background-color: #e2ca78;
+  border-color: #e2ca78
+}
+
 .ui-datepicker.ui-widget{
     z-index:9999!important;
     display:none;
@@ -13250,8 +13263,8 @@ table.hb_room_pricing_plans+.hb_room_pricing_plan_data{
 }
 .msp-preset-4{
     font-family:"Lobster Two";
-    font-weight:700;
-    font-size:85px;
+    font-weight:400;
+    font-size:65px;
     text-align:center;
     line-height:90px;
     color:#fff
@@ -14166,8 +14179,8 @@ table.hb_room_pricing_plans+.hb_room_pricing_plan_data{
 }
 .msp-cn-1-4{
     font-family:"Lobster Two";
-    font-weight:700;
-    font-size:85px;
+    font-weight:400;
+    font-size:65px;
     text-align:center;
     line-height:90px;
     color:#fff
@@ -14207,4 +14220,15 @@ table.hb_room_pricing_plans+.hb_room_pricing_plan_data{
     letter-spacing:2px;
     line-height:40px;
     color:#fff
+}
+
+
+//RITCH CODE:
+
+
+
+
+#panel-36-1-0-0 > .panel-widget-style {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }

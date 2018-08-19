@@ -1,65 +1,69 @@
 <div id="content">
     <article id="post-60" class="custom post-60 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
         <div id="room-60" class="hb_single_room post-60 hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
-            <div class="room-search container-full">
-                <h3 class="section-heading center-align">Check Availability</h3>
+            <div class="room-search container-full room-search-listing">
+                <h3 class="section-heading center-align listing-heading">Check Availability</h3>
                 <div id="hotel-booking-search-5ad36bbf57edc" class="hotel-booking-search cf show-label hide-children">
                     <form name="hb-search-form" action="http://lava.themespirit.com/demo-2/check-availability/" class="hb-search-form-5ad36bbf57e38">
                         <ul class="hb-form-table">
                             <li class="hb-form-field">
-                                <label>Loation</label>
+                                <label class="label-listing-search">Loation</label>
                                 <span class="wpcf7-form-control-wrap your-name">
                                     <input type="text" name="location" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="France">
                                 </span>
                             </li>
                             <li class="hb-form-field">
-                                <label>Check In</label>
+                                <label class="label-listing-search">Check In</label>
                                 <div class="hb-form-field-input hb_input_field">
                                     <input type="text" name="check_in_date" id="check_in_date_5ad36bbf57e38" class="hb_input_date_check" value="April 15, 2018" placeholder="Arrival Date" />
                                 </div>
                             </li>
                             <li class="hb-form-field">
-                                <label>Check Out</label>
+                                <label class="label-listing-search">Check Out</label>
                                 <div class="hb-form-field-input hb_input_field">
                                     <input type="text" name="check_out_date" id="check_out_date_5ad36bbf57e38" class="hb_input_date_check" value="April 16, 2018" placeholder="Departure Date" />
                                 </div>
                             </li>
                         </ul>
                         <p class="hb-submit">
-                            <button type="submit" class="btn-primary">Search</button>
+                            <button type="submit" class="btn-primary btn-listing-search">Search</button>
                         </p>
                     </form>
                 </div>
             </div>
         </div>
     </article>
+
     <div class="background-light full-width">
         <div class="container-full">
             <div class="hb-rooms hb-catalog-column-4">
                 <% @listings.each_with_index do |listing, index| %>
                  <div id="room-#{index}" class="post-#{index} hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
-                    <div class="card">
+                <%= link_to listing_path(listing) do %>
+
+                    <div class=" hb_room_inner card">
                         <div class="media">
-                            <%= link_to listing_path(listing) do %>
                                 <%= cl_image_tag listing.photos.first.path, :crop => "fill", :width => 400, :height => 300 %>
-                            <% end %>
                         </div>
                         <div class="info">
-                            <h3 class="title"><%= link_to listing.name, listing_path(listing) %></h3>
+                            <h3 class="title"><%=  listing.name %></h3>
                             <div class="excerpt">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </div>
-                            <div class="price"> 
-                                <span class="title-price">Price:</span> 
+                            <div class="price">
+                                <span class="title-price">Price:</span>
                                 <span class="price_value price_min"><%= humanized_money_with_symbol(listing.rate_cents) %> </span>
-                                <span class="unit">/ Night</span></div> 
-                                <%= link_to listing_path(listing), class: "btn-secondary" %>
+                                <span class="unit">/ Night</span></div>
+
                             </div>
                         </div>
-                    </div>   
+                            <% end %>
+
+                    </div>
+
                 <% end %>
             </div>
-            <div class="pagination-wrapper cf"> 
+            <div class="pagination-wrapper cf">
              <%= paginate @listings %>
             </div>
         </div>

@@ -10,7 +10,11 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-    
+
+
+    <link href="https://fonts.googleapis.com/css?family=Ovo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400" rel="stylesheet">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two:700%7CRaleway:500" />
     <script type='text/javascript' src='https://use.fontawesome.com/30858dc40a.js?ver=4.0.7'></script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js?ver=3.0.25'></script>
@@ -24,6 +28,85 @@
     <link rel="alternate" type="application/rss+xml" title="Demo 2 &raquo; Feed" href="feed/index.html" />
     <link rel="alternate" type="application/rss+xml" title="Demo 2 &raquo; Comments Feed" href="comments/feed/index.html" />
     <style type="text/css">
+
+
+
+    .page-header {
+      margin: 0px;
+    }
+
+    .listing-heading {
+      color: white;
+    }
+
+    .btn-listing-search {
+      background-color: white;
+      color: #a08e55;
+    }
+
+    .label-listing-search {
+      color: white !important;
+
+    }
+    .room-search-listing {
+        background-color: #a08e55;
+    }
+
+    .lava-ms-subtitle {
+      font-weight: 400;
+    }
+
+    #pg-36-5>.panel-row-style {
+      height: 100vh;
+    }
+
+    .msp-preset-btn-164 {
+      background-color: #a08e55;
+      border: 0px;
+      color: #fff;
+      transition: 0.5s;
+    }
+
+    .msp-preset-btn-164:hover {
+      color: white;
+      text-decoration: none;
+      background-color:#e2ca78;
+      transition: 0.5s;
+    }
+
+    div.hb_room a:hover {
+      text-decoration: none;
+    }
+
+  div.hb_room a .title {
+    transition: 0.5s;
+  }
+
+    div.hb_room a:hover .title {
+      color: #e2ca78;
+      transition: 0.5s;
+    }
+
+    div.hb_room {
+      bottom: 0px;
+      transition: 0.5s;
+    }
+
+    div.hb_room:hover {
+      bottom: 10px;
+      transition: 0.5s
+    }
+
+    div.hb_room_inner {
+      transition: 0.5s;
+      margin-bottom: 0px;
+
+    }
+    div.hb_room_inner:hover {
+      box-shadow: 0px 0px 10px lightgray;
+      transition: 0.5s;
+    }
+
         img.wp-smiley,
         img.emoji {
             display: inline !important;
@@ -113,7 +196,7 @@
             background-image: url(<%= image_tag 'demo_page_header.jpg' %>)
         }
     </style>
-    
+
     <link rel='https://api.w.org/' href='wp-json/index.html' />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
@@ -194,7 +277,8 @@
             z-index: 1;
             margin-left: 6%;
             margin-right: 6%;
-            margin-top: -60px
+            margin-top: 40px;
+            margin-bottom: 40px;
         }
 
         #pg-36-3>.panel-row-style {
