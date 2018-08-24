@@ -412,4 +412,15 @@
     <%= cloudinary_js_config %>
     <%= javascript_pack_tag 'application' %>
 </body>
+
+<!-- Removing sidebar class on aside to fix bugs of position. -->
+<!-- <script>
+  var aside = document.getElementsByTagName('aside');
+  window.onload = function() {
+    aside[0].classList.remove('sidebar')
+  }
+
+  </script> -->
+
 </html>
+
