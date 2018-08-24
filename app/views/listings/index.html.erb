@@ -38,7 +38,7 @@
         <div class="container-full">
             <div class="hb-rooms hb-catalog-column-4">
                 <% @listings.each_with_index do |listing, index| %>
-                 <div id="room-#{index}" class="post-#{index} hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite">
+                 <div id="room-#{index}" class="post-#{index} hb_room type-hb_room status-publish has-post-thumbnail hentry hb_room_type-suite card-hover">
                 <%= link_to listing_path(listing) do %>
 
                     <div class=" hb_room_inner card">
