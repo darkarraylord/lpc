@@ -2,8 +2,10 @@
     display:flex;
     -ms-flex-wrap:wrap;
     flex-wrap:nowrap;
-    -ms-justify-content:space-between;
-    justify-content:space-between
+    -ms-justify-content:center;
+    justify-content:center;
+    align-items: center;
+    background-color: #a08e55;
 }
 .panel-layout.panel-is-rtl .panel-grid.panel-has-style>.panel-row-style,.panel-layout.panel-is-rtl .panel-grid.panel-no-style{
     -ms-flex-direction:row-reverse;
@@ -2314,11 +2316,16 @@ div.wpcf7 .placeheld{
 .mc4wp-form-submit span{
     display:inline-block;
     line-height:50px;
-    vertical-align:top
+    vertical-align:top;
+    color: #a08e55;
+    transition: 0.3s
 }
+
+
 .mc4wp-form-submit .material-icons{
+    transition: 0.3s;
     font-size:24px!important;
-    line-height:50px;
+    line-height:48px;
     height:50px;
     width:50px
 }
@@ -3729,7 +3736,7 @@ p img.alignnone{
     background-color:transparent
 }
 .header-style-2 .header-wrapper.affix-on{
-    background-color:#afa278;
+    background-color:#a08e55;
     height:80px
 }
 .header-style-2 .container-fluid{
@@ -8734,8 +8741,7 @@ hr.gradient{
 .hb-submit .btn-primary{
     width:100%;
     min-width:100%;
-    padding:20px 36px;
-    padding:1.05rem 1.8rem;
+    padding:22px 1.8rem;
 }
 
 .hb-submit .btn-primary:hover {
@@ -14225,10 +14231,3 @@ table.hb_room_pricing_plans+.hb_room_pricing_plan_data{
 
 //RITCH CODE:
 
-
-
-
-#panel-36-1-0-0 > .panel-widget-style {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}

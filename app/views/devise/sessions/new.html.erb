@@ -3,11 +3,12 @@
       <div id="pl-1038" class="panel-layout">
           <div id="pg-1038-0" class="panel-grid panel-has-style">
               <div class="border-bottom panel-row-style panel-row-style-for-1038-0">
-                  <div id="pgc-1038-0-1" class="panel-grid-cell">
+                  <div id="pgc-1038-0-1" class="panel-grid-cell login-custom-container">
                       <div id="panel-1038-0-1-0" class="so-panel widget widget_lava-editor panel-first-child panel-last-child" data-index="1">
                           <div class="panel-widget-style panel-widget-style-for-1038-0-1-0">
                               <div class="so-widget-lava-editor so-widget-lava-editor-base">
-                                  <div class="container-half equal-height">
+                                  <div class="container-half equal-height custom-padding-login">
+                                    <div class="login-form">
                                       <div class="title-wrapper left-align">
                                           <h3 class="widget-title">Login</h3></div>
                                       <div class="lava-text post-content">
@@ -16,12 +17,13 @@
                                               <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name))  do |f| %>
                                                   <p>
                                                     <span class="wpcf7-form-control-wrap your-name">
-                                                      <%= f.input_field :email, required: true, autofocus: true, input_html: { class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required', size: '40', 'aria-required'=>true, 'aria-invalid'=> false, placeholder: "Email*" } %>
+                                                      <%= f.input_field :email, required: true, autofocus: true,placeholder: "Email", input_html: { class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required', size: '40', 'aria-required'=>true, 'aria-invalid'=> false, placeholder: "Email*" } %>
+
                                                     </span>
                                                   </p>
                                                   <p>
                                                     <span class="wpcf7-form-control-wrap your-email">
-                                                      <%= f.input_field :password, required: false, input_html: { class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required', size: '40', 'aria-required'=>true, 'aria-invalid'=> false, placeholder: "Password*" } %>
+                                                      <%= f.input_field :password, required: false, placeholder: "password", input_html: { class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required', size: '40', 'aria-required'=>true, 'aria-invalid'=> false, placeholder: "Password*" } %>
                                                     </span>
                                                   </p>
                                                   <p>
@@ -30,11 +32,12 @@
                                                     </span>
                                                   </p>
                                                   <p>
-                                                    <%= f.button :submit, "Log in", class: "lava-button-flat lava-button-5ad52bc184263" %>
+                                                    <%= f.button :submit, "Log in", class: "msp-preset-btn-164 lava-button-flat lava-button-5ad52bc184263" %>
                                                   </p>
                                                   <div class="wpcf7-response-output wpcf7-display-none"></div>
                                               <% end %>
                                           </div>
+                                        </div>
                                       </div>
                                   </div>
                               </div>
