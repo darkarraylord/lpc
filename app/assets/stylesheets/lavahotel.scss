@@ -1684,7 +1684,16 @@ img.mfp-img{
         padding-left:6px;
         padding-right:6px
     }
+    .ms-nav-next {
+      display: none;
+    }
+    .ms-nav-prev {
+      display: none;
+    }
+
 }
+
+
 .mfp-ie7 .mfp-img{
     padding:0
 }
@@ -8731,6 +8740,12 @@ hr.gradient{
     margin:0!important;
     padding:0
 }
+
+@media (max-width: 1022px) {
+    .hb-form-table {
+      padding: 50px 50px;
+    }
+}
 .hb_input_date_check.error{
     border-color:#ed1c24
 }
@@ -14229,5 +14244,5 @@ table.hb_room_pricing_plans+.hb_room_pricing_plan_data{
 }
 
 
-//RITCH CODE:
+
 

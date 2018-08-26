@@ -53,21 +53,21 @@
                           <meta itemprop="name" content="Le Petit Chateau">
                       </div>
                       <ul id="menu-lava-demo-main-1" class="nav-menu">
-                          <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home menu-item-64
+                          <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home menu-item-64 main-nav-label
                           <%= 'current-menu-item current_page_item' if current_page?('/') %>">
 
                             <%=link_to root_path do %>
                               <span>Home</span>
                             <% end %>
                           </li>
-                          <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-65
+                          <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-65 main-nav-label
                           <%= 'current-menu-item current_page_item' if current_page?('/listings/') %>">
                           <%= link_to listings_path do %>
                             <span>Properties</span>
                           <% end %>
                           </li>
                           <% if user_signed_in? %>
-                            <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79">
+                            <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 main-nav-label">
                               <a href="#">Account</a>
                                 <ul class="sub-menu">
                                     <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80">
@@ -85,7 +85,7 @@
                                 </ul>
                             </li>
                           <% else %>
-                            <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79
+                            <li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79 main-nav-label
                             <%= 'current-menu-item current_page_item' if current_page?('/users/sign_in') %>">
                               <%= link_to t(".sign_in", default: "Login"), new_user_session_path %>
                             </li>
