@@ -27,7 +27,7 @@ $(function() {
     });
 });
 
- 
+
 var hotel_booking_i18n = {
     "invalid_email": "Your email address is invalid.",
     "no_payment_method_selected": "Please select your payment method.",
@@ -99,7 +99,7 @@ var hotel_booking_i18n = {
     "date_start": "1",
     "view_cart": "View Cart",
     "cart_url": "http:\/\/lava.themespirit.com\/demo-2\/view-cart\/"
-}; 
+};
 
 WebFont.load({
     google: {
@@ -112,3 +112,4 @@ WebFont.load({
     }
 });
 document.body.className = document.body.className.replace("siteorigin-panels-before-js", "");
+

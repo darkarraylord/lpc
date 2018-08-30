@@ -1,12 +1,21 @@
+
+
+
+
+<!-- Log in Successful -->
 <% if notice %>
-  <div class="alert alert-info alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= notice %>
-  </div>
+
 <% end %>
+
+
+
+
+<!-- Wrong Info on Log In -->
 <% if alert %>
-  <div class="alert alert-warning alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= alert %>
-  </div>
+  <script>
+    window.onload = function () {
+      var wrongInfo = document.getElementById('wrong-info');
+    wrongInfo.insertAdjacentHTML('beforeend', '<p style="color:rgb(198,0,0)">Wrong Email or Password</p>');
+}
+  </script>
 <% end %>
