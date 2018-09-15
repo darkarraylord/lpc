@@ -226,6 +226,64 @@
         .page-header {
             background-image: url(<%= image_tag 'demo_page_header.jpg' %>)
         }
+
+
+        div.submit {
+          margin-top: 50px;
+        }
+
+        @media screen and (max-width:  768px) {
+
+          .hotel-booking-search .hb-form-field {
+            margin-bottom: 0px;
+
+          }
+          .hotel-booking-search .hb-form-field > label {
+            margin-bottom: 0px;
+          }
+
+          form.search-index hb-form-table .hb-form-field  div.submit {
+            margin-top: 30px;
+          }
+
+          div.room-search > h3.section-heading {
+            padding-top: 50px
+          }
+
+          form.search-index .hb-form-table {
+            padding: 1px 17px;
+          }
+
+          article.hb_room > div.page-header {
+            height: 50vh;
+          }
+
+          article.hb_room > div.page-header > h1.page-title {
+            padding: 218px 15px 100px;
+            text-align: left;
+          }
+
+          div.main-slider > div.slick-list {
+            height: auto;
+          }
+
+          .main-slider .slick-slide {
+            min-height: auto ;
+          }
+
+          table.hb_room_pricing_plans tbody td, table.hb_room_pricing_plans thead th {
+            padding: 10px 8px;
+          }
+
+          form.search-show ul li {
+            margin-bottom: 25px !important;
+          }
+
+          form.search-show ul {
+            padding: 0px;
+          }
+
+        }
     </style>
 
     <link rel='https://api.w.org/' href='wp-json/index.html' />
